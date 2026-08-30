@@ -1959,8 +1959,15 @@
 
             // Year-wise nominee-corpus table (paginated)
             if (d.swpSeries && d.swpSeries.length) {
-                const colX = [margin, margin + 14, margin + 32, margin + 78, margin + 122, margin + 158];
-                const colW = [14, 18, 46, 44, 36, 40];
+                const colW = [12, 14, 36, 34, 34, 44];
+                const colX = [
+                    margin,
+                    margin + colW[0],
+                    margin + colW[0] + colW[1],
+                    margin + colW[0] + colW[1] + colW[2],
+                    margin + colW[0] + colW[1] + colW[2] + colW[3],
+                    margin + colW[0] + colW[1] + colW[2] + colW[3] + colW[4]
+                ];
                 const rowH = 7.2;
 
                 function drawSwpTableHeader() {
