@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ॲडव्हान्स्ड निवृत्ती नियोजन, SIP व SWP कॅल्क्युलेटर | Valmik Dagu Ugale</title>
+    <title>स्पेशल SIP-SWP प्लॅन कॅल्क्युलेटर | Valmik Dagu Ugale</title>
     <style>
+
         :root {
             --primary: #1e3a8a;
             --primary-hover: #1e40af;
@@ -98,6 +99,7 @@
         }
 
         .delay-cost-box {
+            display: block;
             margin-top: 18px;
             padding: 14px 16px;
             background: #fffbeb;
@@ -107,10 +109,19 @@
             font-size: 13px;
             color: #4b5563;
             box-shadow: 0 2px 8px rgba(217, 119, 6, 0.12);
+            text-decoration: none;
+            cursor: pointer;
+            transition: transform 0.12s, box-shadow 0.12s;
+        }
+
+        .delay-cost-box:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 14px rgba(217, 119, 6, 0.2);
         }
 
         .delay-cost-box p {
             margin-bottom: 6px;
+            color: #4b5563;
         }
 
         .delay-cost-box p:last-child {
@@ -704,6 +715,145 @@
                 padding: 2px 0;
             }
         }
+    
+
+        /* ===== Special SIP-SWP Plan additions ===== */
+        .steps-banner {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin: 16px 0 22px;
+        }
+
+        @media (max-width: 700px) {
+            .steps-banner {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .step-box {
+            background: #eff6ff;
+            border: 1px solid #bfdbfe;
+            border-radius: 10px;
+            padding: 12px 10px;
+            text-align: center;
+        }
+
+        .step-box .step-icon {
+            font-size: 20px;
+            margin-bottom: 4px;
+        }
+
+        .step-box h5 {
+            font-size: 12.5px;
+            color: var(--primary);
+            margin-bottom: 3px;
+        }
+
+        .step-box p {
+            font-size: 10.5px;
+            color: var(--text-muted);
+            line-height: 1.3;
+        }
+
+        .example-note {
+            background: #fffbeb;
+            border: 1px solid #fde68a;
+            border-radius: 8px;
+            padding: 10px 14px;
+            font-size: 12.5px;
+            color: #92400e;
+            margin-bottom: 18px;
+        }
+
+        .radio-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .radio-pill {
+            flex: 1 1 auto;
+            min-width: 140px;
+        }
+
+        .radio-pill input {
+            display: none;
+        }
+
+        .radio-pill label {
+            display: block;
+            text-align: center;
+            padding: 10px 8px;
+            border: 1.5px solid var(--border);
+            border-radius: 8px;
+            font-size: 12.5px;
+            font-weight: 600;
+            color: var(--text-muted);
+            cursor: pointer;
+            transition: all 0.15s;
+        }
+
+        .radio-pill input:checked + label {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: #fff;
+        }
+
+        .plan-table-wrap {
+            overflow-x: auto;
+            margin-top: 14px;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+        }
+
+        .plan-table {
+            border-collapse: collapse;
+            width: 100%;
+            min-width: 640px;
+            font-size: 13px;
+        }
+
+        .plan-table th, .plan-table td {
+            padding: 10px 12px;
+            text-align: center;
+            border-bottom: 1px solid #eef2f7;
+            white-space: nowrap;
+        }
+
+        .plan-table thead th {
+            background: #ea580c;
+            color: #fff;
+            font-weight: 700;
+            font-size: 12.5px;
+        }
+
+        .plan-table tbody tr:nth-child(even) {
+            background: #fff7ed;
+        }
+
+        .plan-table td.corpus-val {
+            color: #c2410c;
+            font-weight: 700;
+        }
+
+        .plan-table td.swp-val {
+            color: #15803d;
+            font-weight: 700;
+        }
+
+        .plan-table td.pat-val {
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        .plan-footnote {
+            font-size: 11.5px;
+            color: var(--text-muted);
+            margin-top: 10px;
+            line-height: 1.5;
+        }
+
     </style>
 </head>
 <body>
@@ -731,6 +881,42 @@
 
     <div class="trust-strip">9+ वर्षांचा अनुभव &nbsp;|&nbsp; AMFI-registered &nbsp;|&nbsp; SEBI Regulated</div>
 
+    <div class="header-title">
+        <h1>💎 स्पेशल SIP-SWP प्लॅन कॅल्क्युलेटर</h1>
+        <p>छोट्या रकमेतून दीर्घकाळात संपत्ती निर्माण करा आणि त्यातून दरमहा नियमित उत्पन्न मिळवा</p>
+    </div>
+
+    <a href="retirement-sip-swp-calculator.html" style="display:block; text-align:center; background:#eff6ff; border:1px solid #bfdbfe; border-radius:10px; padding:12px; margin-bottom:16px; text-decoration:none; color:var(--primary); font-weight:700; font-size:13.5px;">
+        🎯 ॲडव्हान्स्ड कॅल्क्युलेटर पाहिजे? (Existing Corpus, Other Income, Life Expectancy सह) — इथे क्लिक करा →
+    </a>
+
+    <div class="example-note">
+        उदाहरण: मासिक SIP रक्कम ₹10,000 | 12% अपेक्षित वार्षिक परतावा — खाली स्वतःचे आकडे टाकून तुमचा प्लॅन बघा.
+    </div>
+
+    <div class="steps-banner">
+        <div class="step-box">
+            <div class="step-icon">🌱</div>
+            <h5>Step 1 - SIP सुरु करा</h5>
+            <p>दर महिन्याला ठराविक रक्कम Equity Scheme मध्ये</p>
+        </div>
+        <div class="step-box">
+            <div class="step-icon">📈</div>
+            <h5>Step 2 - कॉर्पस वाढतो</h5>
+            <p>Compounding ने पैसे वाढतात</p>
+        </div>
+        <div class="step-box">
+            <div class="step-icon">🔄</div>
+            <h5>Step 3 - Switch होतो</h5>
+            <p>Automatic target scheme मध्ये</p>
+        </div>
+        <div class="step-box">
+            <div class="step-icon">💰</div>
+            <h5>Step 4 - दरमहा उत्पन्न</h5>
+            <p>SWP द्वारे मासिक उत्पन्न घ्या</p>
+        </div>
+    </div>
+
     <!-- Client Info Inputs -->
     <div class="client-info-box">
         <div class="input-group">
@@ -743,98 +929,57 @@
         </div>
     </div>
 
-    <div class="header-title">
-        <h1>🎯 ॲडव्हान्स्ड निवृत्ती नियोजन, SIP व SWP कॅल्क्युलेटर</h1>
-        <p>महागाईनुसार लागणारा अचूक कॉर्पस, आवश्यक SIP आणि निवृत्तीनंतर मिळणारे मासिक उत्पन्न व वारस कॉर्पस — सर्व एकाच ठिकाणी</p>
-    </div>
-
     <form id="calcForm">
         <div class="grid">
-            <div class="section-title">१. मूलभूत माहिती (Personal Details)</div>
+            <div class="section-title">१. साधी माहिती (Simple Inputs)</div>
+
+            <div class="input-group">
+                <label>मासिक SIP रक्कम (Monthly SIP Amount)</label>
+                <div class="input-wrapper">
+                    <span>₹</span>
+                    <input type="number" id="baseSip" value="10000" step="500" min="500" required>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label>गुंतवणूक कालावधीतील अपेक्षित परतावा (Pre-Retirement Return)</label>
+                <div class="input-wrapper">
+                    <input type="number" id="expectedReturn" value="12" step="0.5" min="1" max="30" required>
+                    <span>% XIRR</span>
+                </div>
+            </div>
 
             <div class="input-group">
                 <label>सध्याचे वय (Current Age)</label>
                 <div class="input-wrapper">
-                    <input type="number" id="currentAge" value="35" min="18" max="70" required>
+                    <input type="number" id="currentAge" value="35" step="1" min="18" max="70" required>
                     <span>वर्षे</span>
                 </div>
             </div>
 
             <div class="input-group">
-                <label>अपेक्षित निवृत्तीचे वय (Expected Retirement Age)</label>
+                <label>गुंतवणूक कालावधी (Investment Duration)</label>
                 <div class="input-wrapper">
-                    <input type="number" id="retireAge" value="60" min="40" max="75" required>
+                    <input type="number" id="investDuration" value="15" step="1" min="1" max="45" required>
                     <span>वर्षे</span>
                 </div>
             </div>
 
-            <div class="input-group">
-                <label>सध्याचा मासिक खर्च (Current Monthly Expense)</label>
-                <div class="input-wrapper">
-                    <span>₹</span>
-                    <input type="number" id="monthlyExpense" value="20000" step="100" min="100" required>
-                </div>
-            </div>
-
-            <div class="section-title">२. परतावा आणि महागाई अंदाज (Financial Assumptions)</div>
+            <div class="section-title">३. निवृत्तीनंतर SWP सेटिंग्स (सर्व Editable)</div>
 
             <div class="input-group">
-                <label>अपेक्षित महागाई दर (Inflation Rate)</label>
+                <label>निवृत्तीनंतरचा अपेक्षित परतावा दर (Post-Retirement Return)</label>
                 <div class="input-wrapper">
-                    <input type="number" id="inflationRate" value="6" step="0.1" min="0" required>
+                    <input type="number" id="postReturn" value="12" step="0.5" min="1" max="30" required>
                     <span>%</span>
                 </div>
             </div>
 
             <div class="input-group">
-                <label>निवृत्तीपूर्व परतावा दर (Pre-Retirement Return)</label>
-                <div class="input-wrapper">
-                    <input type="number" id="preReturn" value="12" step="0.1" min="0" required>
-                    <span>%</span>
-                </div>
-            </div>
-
-            <div class="input-group">
-                <label>निवृत्तीनंतरचा परतावा दर (Post-Retirement Return)</label>
-                <div class="input-wrapper">
-                    <input type="number" id="postReturn" value="7" step="0.1" min="0" required>
-                    <span>%</span>
-                </div>
-            </div>
-
-            <div class="section-title">३. स्टेप-अप SIP चे पर्याय (Step-Up Options)</div>
-
-            <div class="input-group">
-                <label>वार्षिक % स्टेप-अप (% Increment Year-on-Year)</label>
-                <div class="input-wrapper">
-                    <input type="number" id="stepUpPercent" value="10" step="1" min="0" required>
-                    <span>%</span>
-                </div>
-            </div>
-
-            <div class="input-group">
-                <label>वार्षिक फिक्स रक्कम स्टेप-अप (Fixed Amount Increment)</label>
+                <label>इच्छित मासिक उत्पन्न (Desired Fixed Monthly Income)</label>
                 <div class="input-wrapper">
                     <span>₹</span>
-                    <input type="number" id="stepUpFixed" value="1000" step="100" min="0" required>
-                </div>
-            </div>
-
-            <div class="section-title">४. सध्याची गुंतवणूक व इतर उत्पन्न (Existing Investments &amp; Other Income)</div>
-
-            <div class="input-group">
-                <label>सध्याची निवृत्ती गुंतवणूक (Existing Retirement Corpus)</label>
-                <div class="input-wrapper">
-                    <span>₹</span>
-                    <input type="number" id="existingCorpus" value="0" step="1000" min="0">
-                </div>
-            </div>
-
-            <div class="input-group">
-                <label>इतर हमी उत्पन्न - पेन्शन/भाडे (आजच्या किमतीत, दरमहा)</label>
-                <div class="input-wrapper">
-                    <span>₹</span>
-                    <input type="number" id="otherIncomeMonthly" value="0" step="500" min="0">
+                    <input type="number" id="fixedIncomeAmount" step="500" min="500" placeholder="उदा. 25000" required>
                 </div>
             </div>
 
@@ -845,142 +990,138 @@
                     <span>वर्षे</span>
                 </div>
             </div>
+
+            <div class="section-title">४. ॲडव्हान्स्ड पर्याय (ऐच्छिक Step-Up SIP)</div>
+
+            <div class="input-group" style="grid-column: 1 / -1;">
+                <label>SIP प्रकार निवडा (Choose SIP Type)</label>
+                <div class="radio-group">
+                    <div class="radio-pill">
+                        <input type="radio" name="sipType" id="sipTypeNormal" value="normal" checked onchange="toggleSipTypeInputs()">
+                        <label for="sipTypeNormal">सामान्य SIP (Normal)</label>
+                    </div>
+                    <div class="radio-pill">
+                        <input type="radio" name="sipType" id="sipTypePercent" value="percent" onchange="toggleSipTypeInputs()">
+                        <label for="sipTypePercent">% Step-Up SIP</label>
+                    </div>
+                    <div class="radio-pill">
+                        <input type="radio" name="sipType" id="sipTypeFixed" value="fixed" onchange="toggleSipTypeInputs()">
+                        <label for="sipTypeFixed">ठराविक रक्कम Step-Up</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-group" id="stepPercentGroup" style="display:none;">
+                <label>दरवर्षी % वाढ (Annual % Step-Up)</label>
+                <div class="input-wrapper">
+                    <input type="number" id="stepPercentValue" value="10" step="1" min="1" max="50">
+                    <span>%</span>
+                </div>
+            </div>
+
+            <div class="input-group" id="stepFixedGroup" style="display:none;">
+                <label>दरवर्षी ठराविक रक्कम वाढ (Annual Fixed Step-Up)</label>
+                <div class="input-wrapper">
+                    <span>₹</span>
+                    <input type="number" id="stepFixedValue" value="1000" step="100" min="100">
+                </div>
+            </div>
         </div>
 
-        <button type="button" class="btn" onclick="calculateRetirement()">Calculate Plan</button>
+        <button type="button" class="btn" onclick="calculatePlan()">Calculate Plan</button>
     </form>
 
-    <button type="button" class="sticky-calc-btn" onclick="calculateRetirement(); this.blur();">🧮 Calculate Plan</button>
+    <button type="button" class="sticky-calc-btn" onclick="calculatePlan(); this.blur();">🧮 Calculate Plan</button>
 
-    <div id="resultsBox" class="results-box">
-        <div class="teaser-grid">
-            <div class="teaser-card">
-                <h3>निवृत्तीच्या वेळी लागणारा मासिक खर्च:</h3>
-                <div class="value" id="teaserFutureExpense">₹0 / महिना</div>
-            </div>
+    <!-- Full Results -->
+    <div id="fullResults" class="full-results" style="display:none;">
+        <h3>🎯 तुमचा स्पेशल SIP-SWP प्लॅन</h3>
 
-            <div class="teaser-card teaser-card-hero">
-                <h3>आवश्यक एकूण निवृत्ती कॉर्पस (TARGET CORPUS):</h3>
-                <div class="value" id="teaserCorpus">₹0</div>
-            </div>
+        <div id="exhaustWarning" style="display:none; background:#fef2f2; border:1px solid #fca5a5; border-radius:8px; padding:12px 14px; margin-bottom:16px; color:#b91c1c; font-size:13px; font-weight:600;"></div>
+
+        <div class="result-row">
+            <span>गुंतवणूक कालावधी / निवृत्तीचे वय:</span>
+            <span id="resDurationAge" class="highlight-val">0 वर्षे / वय 0</span>
+        </div>
+        <div class="result-row">
+            <span>एकूण गुंतवणूक (Total Investment):</span>
+            <span id="resInvested" class="highlight-val">₹0</span>
+        </div>
+        <div class="result-row">
+            <span>अंदाजे तयार होणारा फंड (Final Corpus):</span>
+            <span id="resCorpus" class="highlight-val" style="font-size: 18px; color: var(--primary);">₹0</span>
+        </div>
+        <div class="result-row">
+            <span>दरमहा उत्पन्न (SWP - फिक्स, न बदलणारे):</span>
+            <span id="resSwpMonthly" class="highlight-val" style="font-size: 18px; color:#15803d;">₹0 / महिना</span>
+        </div>
+        <div class="result-row">
+            <span>आयुर्मानाच्या वेळी वारसासाठी शिल्लक कॉर्पस:</span>
+            <span id="resNomineeCorpus" class="highlight-val" style="font-size: 17px; color: var(--primary);">₹0</span>
+        </div>
+        <div class="result-row">
+            <span>प्रभावी वार्षिक विथड्रॉवल दर (पहिल्या वर्षी):</span>
+            <span id="resEffectiveRate" class="highlight-val" style="color: #b45309;">0%</span>
+        </div>
+        <div class="result-row">
+            <span>SIP चा पट (मूळ SIP च्या तुलनेत):</span>
+            <span id="resMultiplier" class="highlight-val" style="color: var(--primary);">0x</span>
         </div>
 
-        <!-- WhatsApp CTA Banner -->
-        <a id="waBannerBtn" href="https://wa.me/918087126804" target="_blank" class="wa-banner">
-            🤑 संपत्ती निर्मिती | 🎓 मुलांचं शिक्षण-लग्न खर्च | 💰 निवृत्तीनंतर उत्पन्न - मोफत मार्गदर्शनासाठी कॉल / WhatsApp करा 📞 8087126804
-        </a>
+        <p class="plan-footnote" id="planFootnote"></p>
 
-        <!-- Full Unlocked Results -->
-        <div id="fullResults" class="full-results">
-            <h3>🎉 तुमचा निवृत्ती नियोजन अहवाल</h3>
-            
-            <div class="result-row">
-                <span>निवृत्तीपर्यंत उरलेली वर्षे:</span>
-                <span id="resYearsToRetire" class="highlight-val">0 वर्षे</span>
+        <div id="idealAmountBox" style="background:#eff6ff; border:1px solid #bfdbfe; border-radius:10px; padding:14px 16px; margin:16px 0;">
+            <h4 style="color: var(--primary); font-size: 14px; margin-bottom: 8px;">🎯 कॉर्पस कायम ठेवण्यासाठी आदर्श मासिक उत्पन्न (Ideal Sustainable Amount)</h4>
+            <div class="result-row" style="border:none; padding: 4px 0;">
+                <span>निवृत्तीच्या क्षणी फक्त परताव्याइतकीच रक्कम काढल्यास (कॉर्पस कायम/growing राहील):</span>
+                <span id="resIdealAmount" class="highlight-val" style="font-size: 17px; color:#1e3a8a;">₹0 / महिना</span>
             </div>
-            <div class="result-row">
-                <span>निवृत्तीच्या वेळचा मासिक खर्च (Inflation Adjusted):</span>
-                <span id="resFutureExpense" class="highlight-val">₹0 / महिना</span>
-            </div>
-            <div class="result-row">
-                <span>निवृत्तीनंतर लागणारा एकूण फंड (Corpus Needed):</span>
-                <span id="resTotalCorpus" class="highlight-val" style="font-size: 18px; color: var(--primary);">₹0</span>
-            </div>
-            <div class="result-row" id="rowExistingCorpusFV" style="display:none;">
-                <span>सध्याची गुंतवणूक निवृत्तीपर्यंत वाढून होईल:</span>
-                <span id="resExistingCorpusFV" class="highlight-val" style="color:#166534;">₹0</span>
-            </div>
-            <div class="result-row" id="rowCorpusGap" style="display:none;">
-                <span>नवीन SIP मार्फत उभा करायचा उर्वरित फंड:</span>
-                <span id="resCorpusGap" class="highlight-val" style="font-size: 17px;">₹0</span>
-            </div>
-
-            <h4 style="margin-top: 20px; color: #166534; font-size: 15px;">हा फंड मिळवण्यासाठी आजपासून आवश्यक मासिक SIP पर्याय:</h4>
-            
-            <div class="sip-card-grid">
-                <div class="sip-option-card">
-                    <h4>१. सामान्य नियमित SIP (Normal SIP)</h4>
-                    <div class="sip-val" id="resNormalSIP">₹0</div>
-                    <p>दरमहा फिक्स रक्कम (कोणतीही वाढ नाही)</p>
-                </div>
-
-                <div class="sip-option-card">
-                    <h4>२. टक्केवारीनुसार वाढणारी SIP (% Step-Up)</h4>
-                    <div class="sip-val" id="resPercentStepUpSIP">₹0</div>
-                    <p>दरवर्षी <span id="lblStepPercent">10%</span> ने SIP वाढवा</p>
-                </div>
-
-                <div class="sip-option-card">
-                    <h4>३. ठराविक रकमेने वाढणारी SIP (Fixed Step-Up)</h4>
-                    <div class="sip-val" id="resFixedStepUpSIP">₹0</div>
-                    <p>दरवर्षी <span id="lblStepFixed">₹1,000</span> ने SIP वाढवा</p>
-                    <p id="fixedStepUpNote" class="fixed-stepup-note" style="display:none;"></p>
-                </div>
-            </div>
-
-            <h4 style="margin-top: 22px; color: #166534; font-size: 15px;">कॉर्पस कसा वाढत जाईल (Normal SIP प्रमाणे):</h4>
-            <div class="chart-wrap">
-                <canvas id="accumulationChart" width="700" height="260"></canvas>
-            </div>
+            <p id="idealAmountNote" class="plan-footnote" style="margin-top:6px;"></p>
         </div>
 
-        <!-- Post-Retirement SWP & Nominee Corpus -->
-        <div id="swpSection" class="full-results swp-section" style="display:none; margin-top:20px;">
-            <h3>💸 निवृत्तीनंतर उत्पन्न (SWP) व वारसासाठी शिल्लक कॉर्पस</h3>
-            <p class="swp-intro">निवृत्तीच्या दिवशी तुमचा संपूर्ण कॉर्पस तयार आहे असे गृहीत धरून, त्यातून दरमहा किती पैसे काढता येतील आणि दरवर्षी शिल्लक किती राहील हे खाली दाखवले आहे.</p>
-
-            <div class="result-row">
-                <span>दरमहा मिळणारे उत्पन्न (SWP - Flat, न वाढणारे):</span>
-                <span id="resSwpMonthly" class="highlight-val" style="font-size: 18px; color: var(--primary);">₹0 / महिना</span>
-            </div>
-            <div class="result-row">
-                <span id="resSwpNomineeLabel">अपेक्षित आयुर्मानाच्या वेळी वारसासाठी शिल्लक कॉर्पस:</span>
-                <span id="resSwpNomineeCorpus" class="highlight-val" style="font-size: 18px; color:#166534;">₹0</span>
-            </div>
-            <p id="swpExhaustedNote" class="fixed-stepup-note" style="display:none;"></p>
-
-            <div class="chart-wrap">
-                <canvas id="depletionChart" width="700" height="260"></canvas>
-            </div>
-
-            <h4 style="margin-top: 18px; color: #166534; font-size: 15px;">वर्षनिहाय तक्ता (Year-wise SWP &amp; Nominee Corpus Table):</h4>
-            <div class="swp-table-wrap">
-                <table class="swp-table" id="swpTable">
-                    <thead>
-                        <tr>
-                            <th>वर्ष</th>
-                            <th>वय</th>
-                            <th>वर्षारंभीची शिल्लक</th>
-                            <th>वर्षभरात काढलेली रक्कम</th>
-                            <th>मिळालेले व्याज</th>
-                            <th>वर्षअखेरची शिल्लक (वारस कॉर्पस)</th>
-                        </tr>
-                    </thead>
-                    <tbody id="swpTableBody"></tbody>
-                </table>
-            </div>
-            <p class="swp-footnote">टीप: वरील तक्ता दरमहा एक सारखी (flat) रक्कम काढल्यास दाखवतो, त्यामुळे कॉर्पस लवकर संपत नाही आणि कुटुंबासाठी/वारसासाठी शिल्लक राहते.</p>
-        </div>
-
-        <!-- Cost of Delay (honest, calculated urgency) -->
-        <div class="delay-cost-box" id="delayCostBox" style="display:none;">
+        <!-- Cost of Delay (honest, calculated urgency) — whole box is a WhatsApp link -->
+        <a href="#" id="delayCostBox" class="delay-cost-box" style="display:none;" target="_blank" rel="noopener">
             <p>⏳ <strong>१ वर्ष उशीर केल्यास काय फरक पडतो?</strong></p>
             <p>आजच SIP सुरू केल्यास हे ध्येय <strong id="delayGoalToday">₹0</strong> मध्ये साध्य करता येईल.</p>
-            <p>पण १ वर्ष उशीर केल्यास तुमचा <strong id="delayShortfall" style="color:#b91c1c;">₹0</strong> एवढा कॉर्पस कमी होईल — नुसत्या उशीरामुळे तुम्हाला तब्बल <strong id="delayIncomeLoss" style="color:#b91c1c;">₹0</strong>/महिना एवढी कमी निवृत्ती उत्पन्न मिळेल.</p>
-            <p class="delay-cta">योग्य वेळी योग्य पाऊल उचलण्यासाठी — आजच कॉल किंवा WhatsApp करून मार्गदर्शन घ्या. 📞 8087126804</p>
+            <p>पण १ वर्ष उशीर केल्यास तुमचा <strong id="delayShortfall" style="color:#b91c1c;">₹0</strong> एवढा कॉर्पस कमी होईल — नुसत्या उशीरामुळे तुम्हाला तब्बल <strong id="delayIncomeLoss" style="color:#b91c1c;">₹0</strong>/महिना एवढी कमी शाश्वत निवृत्ती उत्पन्न क्षमता मिळेल.</p>
+            <p class="delay-cta">योग्य वेळी योग्य पाऊल उचलण्यासाठी — आजच WhatsApp किंवा कॉल करून मार्गदर्शन घ्या. 📞 8087126804</p>
+        </a>
+
+        <h4 style="margin-top: 20px; color: #166534; font-size: 15px;">निवृत्तीनंतर आयुर्मानापर्यंत कॉर्पस कसा राहील:</h4>
+        <div class="chart-wrap">
+            <canvas id="depletionChart" width="700" height="260"></canvas>
+        </div>
+
+        <h4 style="margin-top: 18px; color: #166534; font-size: 15px;">वर्षनिहाय तक्ता (Year-wise SWP Table):</h4>
+        <div class="swp-table-wrap">
+            <table class="swp-table" id="swpTable">
+                <thead>
+                    <tr>
+                        <th>वर्ष</th>
+                        <th>वय</th>
+                        <th>वर्षारंभीची शिल्लक</th>
+                        <th>मासिक उत्पन्न</th>
+                        <th>वर्षभरात काढलेली रक्कम</th>
+                        <th>मिळालेले व्याज</th>
+                        <th>वर्षअखेरची शिल्लक</th>
+                        <th>त्या वर्षीचा दर %</th>
+                    </tr>
+                </thead>
+                <tbody id="swpTableBody"></tbody>
+            </table>
         </div>
 
         <!-- PDF Download / Share Actions -->
         <div class="action-buttons-section">
             <div class="action-buttons-row">
-                <button type="button" class="btn-action btn-pdf" id="btnDownloadPdf" onclick="downloadPdfReport()">
+                <button type="button" class="btn-action btn-pdf" id="btnDownloadPdf" onclick="downloadPlanPdf()">
                     📄 Download PDF Report
                 </button>
-                <button type="button" class="btn-action btn-share-wa" id="btnShareWa" onclick="sharePdfWhatsApp()">
+                <button type="button" class="btn-action btn-share-wa" id="btnShareWa" onclick="sharePlanWhatsApp()">
                     📲 Share on WhatsApp
                 </button>
             </div>
-            <button type="button" class="btn-action btn-email" id="btnShareEmail" onclick="sharePdfEmail()">
+            <button type="button" class="btn-action btn-email" id="btnShareEmail" onclick="sharePlanEmail()">
                 ✉️ Share via Email
             </button>
             <p class="share-note">ज्या डिव्हाइसवर थेट फाइल शेअरिंग सपोर्ट नाही, तिथे PDF आपोआप डाउनलोड होईल — कृपया ती स्वतः जोडून (attach करून) पाठवा.</p>
@@ -988,8 +1129,8 @@
 
         <!-- Final CTA -->
         <div class="final-cta-section">
-            <p>कॅल्क्युलेटरने तुम्हाला फक्त आवश्यक आकडेवारी दाखवली आहे. पण हा प्लॅन प्रत्यक्षात कसा राबवायचा, योग्य म्युच्युअल फंड योजना कशा निवडायच्या आणि पोर्टफोलिओचे स्ट्रक्चर कसे असावे?</p>
-            <p>हे सविस्तर समजून घेण्यासाठी व तुमच्या सर्व शंकांचे निरसन करण्यासाठी आजच मोफत:</p>
+            <p>वरील आकडे फक्त अंदाज आहेत. तुमच्यासाठी नेमकी कोणती योजना, किती रक्कम आणि कोणता SWP पर्याय योग्य आहे हे ठरवण्यासाठी वैयक्तिक सल्ला आवश्यक आहे.</p>
+            <p>सविस्तर समजून घेण्यासाठी व तुमच्या सर्व शंकांचे निरसन करण्यासाठी आजच मोफत:</p>
             <p style="font-weight:700; margin-top:8px;">
                 <a id="waFinalBtn" href="https://wa.me/918087126804" target="_blank" style="color:#166534; text-decoration:none;">💬 WhatsApp मेसेज करा</a>
                 &nbsp;|&nbsp;
@@ -1002,8 +1143,8 @@
     <div class="disclaimer-section">
         <strong>Disclaimer:</strong>
         <ol style="margin:8px 0 0 18px; padding:0;">
+            <li>SWP = Systematic Withdrawal Plan. वरील मासिक उत्पन्नाचे आकडे केवळ उदाहरणादाखल (illustrative) आहेत.</li>
             <li>Past performance may or may not be sustained in future and is not a guarantee of any future returns.</li>
-            <li>Please note that these calculators are for illustrations only and do not represent actual returns.</li>
             <li>Mutual Funds do not have a fixed rate of return and it is not possible to predict the rate of return.</li>
             <li>Mutual Fund Investments are subject to market risks, read all scheme related documents carefully.</li>
             <li>This report is generated based on the assumptions entered by the client.</li>
@@ -1011,16 +1152,14 @@
     </div>
 
     <div class="site-footer">
-        Valmik Dagu Ugale &nbsp;|&nbsp; ARN-142382 &nbsp;|&nbsp; EUIN-E243525 &nbsp;|&nbsp; AMFI-registered mutual fund distributor & SIF distributor<br>
+        Valmik Dagu Ugale &nbsp;|&nbsp; ARN-142382 &nbsp;|&nbsp; EUIN-E243525 &nbsp;|&nbsp; AMFI-registered mutual fund distributor &amp; SIF distributor<br>
         📞 8087126804 &nbsp;|&nbsp; ✉️ valmikugale@gmail.com &nbsp;|&nbsp; नाशिक, महाराष्ट्र
     </div>
 
 </div>
 
+
 <script>
-    // Setup: runs immediately since this script is the last thing in <body>,
-    // so all elements above already exist. Also listens for DOMContentLoaded
-    // as a fallback for environments that load scripts differently.
     function initCalculator() {
         const today = new Date();
         const dd = String(today.getDate()).padStart(2, '0');
@@ -1036,7 +1175,7 @@
             calcForm.dataset.boundSubmit = 'true';
             calcForm.addEventListener('submit', function(e) {
                 e.preventDefault();
-                calculateRetirement();
+                calculatePlan();
             });
         }
     }
@@ -1047,21 +1186,224 @@
         initCalculator();
     }
 
-    let globalCalcData = {};
-
-    function formatINR(val) {
-        return new Intl.NumberFormat('en-IN', {
-            style: 'currency',
-            currency: 'INR',
-            maximumFractionDigits: 0
-        }).format(val);
+    function toggleSipTypeInputs() {
+        const sipType = document.querySelector('input[name="sipType"]:checked').value;
+        document.getElementById('stepPercentGroup').style.display = (sipType === 'percent') ? 'block' : 'none';
+        document.getElementById('stepFixedGroup').style.display = (sipType === 'fixed') ? 'block' : 'none';
     }
 
-    // ===================== LIGHTWEIGHT CANVAS CHARTS =====================
-    // No charting library is used — both charts are drawn directly on a
-    // <canvas> with the 2D context, and the same canvas is reused (via
-    // toDataURL) to embed the chart as an image inside the PDF report.
 
+    function annuityDueFactor(monthlyRate, months) {
+        if (Math.abs(monthlyRate) < 0.0000001) return months;
+        return ((Math.pow(1 + monthlyRate, months) - 1) / monthlyRate) * (1 + monthlyRate);
+    }
+
+    // Forward projection: given a starting SIP and (optionally) a step-up
+    // schedule, compute total invested and the market value achieved after
+    // `years` of investing, at monthly-compounded rate `monthlyR`.
+    function projectSipGrowth(baseSip, years, monthlyR, sipType, stepPercent, stepFixed) {
+        if (sipType === 'normal') {
+            return {
+                invested: baseSip * 12 * years,
+                corpus: baseSip * annuityDueFactor(monthlyR, years * 12)
+            };
+        }
+        const year12Factor = annuityDueFactor(monthlyR, 12);
+        let invested = 0, corpus = 0;
+        for (let y = 1; y <= years; y++) {
+            const yearSip = (sipType === 'percent')
+                ? baseSip * Math.pow(1 + stepPercent / 100, y - 1)
+                : baseSip + (y - 1) * stepFixed;
+            const growthYears = years - y;
+            const yearEndValue = year12Factor * Math.pow(1 + monthlyR, 12 * growthYears);
+            invested += yearSip * 12;
+            corpus += yearSip * yearEndValue;
+        }
+        return { invested, corpus };
+    }
+
+    let globalPlanData = {};
+
+    function calculatePlan() {
+        const baseSip = parseFloat(document.getElementById('baseSip').value);
+        const expectedReturn = parseFloat(document.getElementById('expectedReturn').value);
+        const currentAge = parseFloat(document.getElementById('currentAge').value);
+        const investDuration = parseFloat(document.getElementById('investDuration').value);
+        const postReturn = parseFloat(document.getElementById('postReturn').value);
+        const fixedIncomeAmount = parseFloat(document.getElementById('fixedIncomeAmount').value);
+        const lifeExpectancy = parseFloat(document.getElementById('lifeExpectancy').value);
+        const sipType = document.querySelector('input[name="sipType"]:checked').value;
+        const stepPercent = parseFloat(document.getElementById('stepPercentValue').value) || 0;
+        const stepFixed = parseFloat(document.getElementById('stepFixedValue').value) || 0;
+
+        if (!baseSip || baseSip <= 0) {
+            alert('कृपया वैध मासिक SIP रक्कम टाका.');
+            return;
+        }
+        if (!expectedReturn || expectedReturn <= 0 || !postReturn || postReturn <= 0) {
+            alert('कृपया वैध परतावा % टाका.');
+            return;
+        }
+        if (!fixedIncomeAmount || fixedIncomeAmount <= 0) {
+            alert('कृपया इच्छित मासिक उत्पन्न रक्कम टाका.');
+            return;
+        }
+        if (!currentAge || !investDuration || investDuration <= 0) {
+            alert('कृपया वैध वय आणि गुंतवणूक कालावधी टाका.');
+            return;
+        }
+        const retireAge = currentAge + investDuration;
+        if (!lifeExpectancy || retireAge >= lifeExpectancy) {
+            alert('अपेक्षित आयुर्मान हे निवृत्तीच्या वयापेक्षा (सध्याचे वय + गुंतवणूक कालावधी) जास्त असावे.');
+            return;
+        }
+
+        const monthlyR = (expectedReturn / 100) / 12;
+        const { invested, corpus } = projectSipGrowth(baseSip, investDuration, monthlyR, sipType, stepPercent, stepFixed);
+
+        // Fixed monthly withdrawal — a constant ₹ amount the client chose,
+        // simple to explain. Alongside it we compute the EFFECTIVE % this
+        // represents each year (annual withdrawal ÷ that year's opening
+        // balance) so the advisor can see whether it's aggressive relative
+        // to the post-retirement return — and if it exceeds what the corpus
+        // can sustain, the corpus can run out before life expectancy.
+        const yearsInRetirement = Math.round(lifeExpectancy - retireAge);
+        const monthlyPostReturn = (postReturn / 100) / 12;
+        const monthlyIncome = fixedIncomeAmount;
+        const swpSeries = [];
+        let balance = corpus;
+        let corpusExhaustedYear = null;
+        for (let yr = 1; yr <= yearsInRetirement; yr++) {
+            const openingBalance = balance;
+            let withdrawalAnnual = 0, interestAnnual = 0;
+            for (let m = 0; m < 12; m++) {
+                if (balance <= 0) { balance = 0; continue; }
+                const interest = balance * monthlyPostReturn;
+                const withdrawal = Math.min(monthlyIncome, balance + interest);
+                balance = balance + interest - withdrawal;
+                interestAnnual += interest;
+                withdrawalAnnual += withdrawal;
+                if (balance < 0) balance = 0;
+            }
+            if (balance <= 0 && corpusExhaustedYear === null && withdrawalAnnual < monthlyIncome * 12) {
+                corpusExhaustedYear = yr;
+            }
+            const effectiveRatePct = openingBalance > 0 ? (withdrawalAnnual / openingBalance) * 100 : 0;
+            swpSeries.push({
+                year: yr,
+                age: retireAge + yr,
+                openingBalance,
+                monthlyIncome,
+                withdrawalAnnual,
+                interestAnnual,
+                closingBalance: balance,
+                effectiveRatePct
+            });
+        }
+
+        const finalNomineeCorpus = swpSeries.length ? swpSeries[swpSeries.length - 1].closingBalance : corpus;
+        const multiplier = monthlyIncome / baseSip;
+        const effectiveRateYear1 = swpSeries.length ? swpSeries[0].effectiveRatePct : 0;
+
+        // "Ideal" sustainable amount: withdrawing exactly what the corpus
+        // earns each year (= post-retirement return), so the principal
+        // itself stays intact (or keeps growing) indefinitely.
+        const idealMonthlyAmount = corpus * (postReturn / 100) / 12;
+
+        // Cost of Delay: same monthly SIP, but 1 year less to invest it —
+        // the resulting corpus shortfall, converted into lost sustainable
+        // monthly income using the same ideal-rate logic above.
+        let delayShortfallCorpus = null;
+        let delayReducedMonthlyIncome = null;
+        if (investDuration > 1) {
+            const delayedResult = projectSipGrowth(baseSip, investDuration - 1, monthlyR, sipType, stepPercent, stepFixed);
+            delayShortfallCorpus = corpus - delayedResult.corpus;
+            if (delayShortfallCorpus > 0) {
+                delayReducedMonthlyIncome = delayShortfallCorpus * (postReturn / 100) / 12;
+            }
+        }
+
+        globalPlanData = {
+            baseSip, expectedReturn, postReturn, fixedIncomeAmount, lifeExpectancy,
+            currentAge, investDuration, retireAge,
+            sipType, stepPercent, stepFixed,
+            invested, corpus, monthlyIncome, finalNomineeCorpus,
+            multiplier, effectiveRateYear1, idealMonthlyAmount,
+            delayShortfallCorpus, delayReducedMonthlyIncome,
+            yearsInRetirement, swpSeries, corpusExhaustedYear
+        };
+
+        document.getElementById('resDurationAge').innerText = investDuration + ' वर्षे / वय ' + retireAge;
+        document.getElementById('resInvested').innerText = formatINR(invested);
+        document.getElementById('resCorpus').innerText = formatINR(corpus);
+        document.getElementById('resSwpMonthly').innerText = formatINR(monthlyIncome) + ' / महिना';
+        document.getElementById('resNomineeCorpus').innerText = formatINR(finalNomineeCorpus);
+        document.getElementById('resEffectiveRate').innerText = effectiveRateYear1.toFixed(2) + '%';
+        document.getElementById('resMultiplier').innerText = multiplier.toFixed(1) + 'x';
+        document.getElementById('resIdealAmount').innerText = formatINR(idealMonthlyAmount) + ' / महिना';
+
+        const idealNoteEl = document.getElementById('idealAmountNote');
+        if (fixedIncomeAmount > idealMonthlyAmount * 1.02) {
+            idealNoteEl.innerText = '⚠️ तुम्ही निवडलेली ₹' + formatINR(fixedIncomeAmount) + ' ही आदर्श रकमेपेक्षा जास्त आहे — म्हणजे तुम्ही मूळ रकमेतून (principal मधून) थोडे थोडे काढत आहात, त्यामुळे कॉर्पस हळूहळू कमी होत जाईल.';
+        } else if (fixedIncomeAmount < idealMonthlyAmount * 0.98) {
+            idealNoteEl.innerText = '✅ तुम्ही निवडलेली ₹' + formatINR(fixedIncomeAmount) + ' ही आदर्श रकमेपेक्षा कमी आहे — कॉर्पस वेळेसोबत आणखी वाढत राहील.';
+        } else {
+            idealNoteEl.innerText = '✅ तुम्ही निवडलेली रक्कम जवळपास आदर्श रकमेइतकीच आहे — कॉर्पस साधारण कायम राहील.';
+        }
+
+        const delayBoxEl = document.getElementById('delayCostBox');
+        if (delayReducedMonthlyIncome !== null && delayReducedMonthlyIncome > 0) {
+            document.getElementById('delayGoalToday').innerText = formatINR(corpus);
+            document.getElementById('delayShortfall').innerText = formatINR(delayShortfallCorpus);
+            document.getElementById('delayIncomeLoss').innerText = formatINR(delayReducedMonthlyIncome);
+            const waMsg = encodeURIComponent('नमस्ते! मला उशीर न करता आजच SIP सुरू करायचे आहे. कृपया मार्गदर्शन करा.');
+            delayBoxEl.href = 'https://wa.me/918087126804?text=' + waMsg;
+            delayBoxEl.style.display = 'block';
+        } else {
+            delayBoxEl.style.display = 'none';
+        }
+
+        const exhaustWarningEl = document.getElementById('exhaustWarning');
+        if (corpusExhaustedYear !== null) {
+            exhaustWarningEl.innerText = '⚠️ ही रक्कम टिकणार नाही — या गृहितकांनुसार, वय ' + (retireAge + corpusExhaustedYear) +
+                ' च्या आसपास कॉर्पस पूर्णपणे संपेल (आयुर्मान वय ' + lifeExpectancy + ' च्या आधीच). कृपया मासिक उत्पन्नाची रक्कम कमी करा किंवा गुंतवणूक कालावधी वाढवा.';
+            exhaustWarningEl.style.display = 'block';
+        } else {
+            exhaustWarningEl.style.display = 'none';
+        }
+
+        const footnoteEl = document.getElementById('planFootnote');
+        let sipTypeNote = 'सामान्य (Normal) SIP';
+        if (sipType === 'percent') sipTypeNote = 'दरवर्षी ' + stepPercent + '% ने वाढणारी Step-Up SIP';
+        if (sipType === 'fixed') sipTypeNote = 'दरवर्षी ₹' + formatINR(stepFixed) + ' ने वाढणारी Step-Up SIP';
+        footnoteEl.innerText = sipTypeNote + ' द्वारे वय ' + retireAge + ' पर्यंत तयार झालेला फंड, दरमहा फिक्स ₹' + formatINR(fixedIncomeAmount) +
+            ' (न बदलणारी रक्कम) काढल्यास वय ' + lifeExpectancy + ' पर्यंत (' + yearsInRetirement + ' वर्षे) कसा राहील ते वरील तक्त्यात दाखवले आहे.';
+
+        const tbody = document.getElementById('swpTableBody');
+        tbody.innerHTML = '';
+        swpSeries.forEach(row => {
+            const tr = document.createElement('tr');
+            if (corpusExhaustedYear !== null && row.year >= corpusExhaustedYear) {
+                tr.className = 'exhausted-row';
+            }
+            tr.innerHTML =
+                '<td>' + row.year + '</td>' +
+                '<td>' + row.age + '</td>' +
+                '<td>' + formatINR(row.openingBalance) + '</td>' +
+                '<td>' + formatINR(row.monthlyIncome) + '</td>' +
+                '<td>' + formatINR(row.withdrawalAnnual) + '</td>' +
+                '<td>' + formatINR(row.interestAnnual) + '</td>' +
+                '<td>' + formatINR(row.closingBalance) + '</td>' +
+                '<td>' + row.effectiveRatePct.toFixed(2) + '%</td>';
+            tbody.appendChild(tr);
+        });
+
+        drawDepletionChart(swpSeries, corpus);
+
+        document.getElementById('fullResults').style.display = 'block';
+    }
+
+    // ===================== CANVAS DEPLETION CHART =====================
     function shortINR(val) {
         val = Math.round(val);
         if (Math.abs(val) >= 10000000) return (val / 10000000).toFixed(1) + 'Cr';
@@ -1081,104 +1423,6 @@
         return { ctx, w: displayW, h: displayH };
     }
 
-    // Draws a two-series bar+line chart: existing-corpus contribution (bar,
-    // bottom stack), SIP contribution (bar, top stack), and a dashed target
-    // line for the total corpus needed at retirement.
-    function drawAccumulationChart(series, targetCorpus) {
-        const canvas = document.getElementById('accumulationChart');
-        if (!canvas || !series || !series.length) return;
-        canvas.setAttribute('data-basew', 700);
-        canvas.setAttribute('data-baseh', 260);
-        const { ctx, w, h } = setupHiDPICanvas(canvas);
-        ctx.clearRect(0, 0, w, h);
-
-        const padL = 55, padR = 15, padT = 15, padB = 30;
-        const chartW = w - padL - padR;
-        const chartH = h - padT - padB;
-
-        const maxVal = Math.max(targetCorpus, ...series.map(s => s.totalVal)) * 1.08;
-        const yFor = v => padT + chartH - (v / maxVal) * chartH;
-
-        // Axes
-        ctx.strokeStyle = '#cbd5e1';
-        ctx.lineWidth = 1;
-        ctx.beginPath();
-        ctx.moveTo(padL, padT);
-        ctx.lineTo(padL, padT + chartH);
-        ctx.lineTo(padL + chartW, padT + chartH);
-        ctx.stroke();
-
-        // Y gridlines + labels
-        ctx.fillStyle = '#64748b';
-        ctx.font = '10px Arial';
-        ctx.textAlign = 'right';
-        const ySteps = 4;
-        for (let i = 0; i <= ySteps; i++) {
-            const val = (maxVal / ySteps) * i;
-            const y = yFor(val);
-            ctx.strokeStyle = '#f1f5f9';
-            ctx.beginPath();
-            ctx.moveTo(padL, y);
-            ctx.lineTo(padL + chartW, y);
-            ctx.stroke();
-            ctx.fillText('₹' + shortINR(val), padL - 6, y + 3);
-        }
-
-        // Bars (stacked: existing corpus growth + SIP growth)
-        const n = series.length;
-        const barSlot = chartW / n;
-        const barW = Math.max(2, barSlot * 0.6);
-        series.forEach((s, i) => {
-            const x = padL + i * barSlot + (barSlot - barW) / 2;
-            const yExisting = yFor(s.existingVal);
-            const yTotal = yFor(s.totalVal);
-            if (s.existingVal > 0) {
-                ctx.fillStyle = '#b8860b';
-                ctx.fillRect(x, yExisting, barW, padT + chartH - yExisting);
-            }
-            ctx.fillStyle = '#1e3a8a';
-            ctx.fillRect(x, yTotal, barW, yExisting - yTotal);
-        });
-
-        // Target corpus dashed line
-        const yTarget = yFor(targetCorpus);
-        ctx.strokeStyle = '#dc2626';
-        ctx.setLineDash([5, 4]);
-        ctx.lineWidth = 1.4;
-        ctx.beginPath();
-        ctx.moveTo(padL, yTarget);
-        ctx.lineTo(padL + chartW, yTarget);
-        ctx.stroke();
-        ctx.setLineDash([]);
-        ctx.fillStyle = '#dc2626';
-        ctx.textAlign = 'left';
-        ctx.fillText('लक्ष्य कॉर्पस', padL + 4, yTarget - 4);
-
-        // X labels (every few years to avoid clutter)
-        ctx.fillStyle = '#64748b';
-        ctx.textAlign = 'center';
-        const labelEvery = Math.max(1, Math.ceil(n / 8));
-        series.forEach((s, i) => {
-            if (i % labelEvery === 0 || i === n - 1) {
-                const x = padL + i * barSlot + barSlot / 2;
-                ctx.fillText('वय ' + s.age, x, padT + chartH + 14);
-            }
-        });
-
-        // Legend
-        ctx.textAlign = 'left';
-        ctx.fillStyle = '#b8860b';
-        ctx.fillRect(padL, 2, 9, 9);
-        ctx.fillStyle = '#334155';
-        ctx.fillText('सध्याची गुंतवणूक', padL + 13, 10);
-        ctx.fillStyle = '#1e3a8a';
-        ctx.fillRect(padL + 130, 2, 9, 9);
-        ctx.fillStyle = '#334155';
-        ctx.fillText('नवीन SIP', padL + 143, 10);
-    }
-
-    // Draws the post-retirement corpus depletion/legacy line — corpus
-    // balance at the end of each retirement year.
     function drawDepletionChart(series, startingCorpus) {
         const canvas = document.getElementById('depletionChart');
         if (!canvas || !series || !series.length) return;
@@ -1207,9 +1451,8 @@
         ctx.fillStyle = '#64748b';
         ctx.font = '10px Arial';
         ctx.textAlign = 'right';
-        const ySteps = 4;
-        for (let i = 0; i <= ySteps; i++) {
-            const val = (maxVal / ySteps) * i;
+        for (let i = 0; i <= 4; i++) {
+            const val = (maxVal / 4) * i;
             const y = yFor(val);
             ctx.strokeStyle = '#f1f5f9';
             ctx.beginPath();
@@ -1219,7 +1462,6 @@
             ctx.fillText('₹' + shortINR(val), padL - 6, y + 3);
         }
 
-        // Filled area under the line (legacy corpus) for visual impact
         ctx.beginPath();
         ctx.moveTo(xFor(0), yFor(startingCorpus));
         series.forEach((s, i) => ctx.lineTo(xFor(i + 1), yFor(s.closingBalance)));
@@ -1236,7 +1478,6 @@
         series.forEach((s, i) => ctx.lineTo(xFor(i + 1), yFor(s.closingBalance)));
         ctx.stroke();
 
-        // X labels
         ctx.fillStyle = '#64748b';
         ctx.textAlign = 'center';
         const labelEvery = Math.max(1, Math.ceil(n / 8));
@@ -1250,309 +1491,272 @@
         ctx.fillStyle = '#15803d';
         ctx.fillRect(padL, 2, 9, 9);
         ctx.fillStyle = '#334155';
-        ctx.fillText('शिल्लक कॉर्पस (वारस)', padL + 13, 10);
+        ctx.fillText('शिल्लक कॉर्पस', padL + 13, 10);
     }
 
-    function calculateRetirement() {
-        const currentAge = parseFloat(document.getElementById('currentAge').value);
-        const retireAge = parseFloat(document.getElementById('retireAge').value);
-        const monthlyExpense = parseFloat(document.getElementById('monthlyExpense').value);
-        const inflationRate = parseFloat(document.getElementById('inflationRate').value) / 100;
-        const preReturn = parseFloat(document.getElementById('preReturn').value) / 100;
-        const postReturn = parseFloat(document.getElementById('postReturn').value) / 100;
-        const stepUpPercent = parseFloat(document.getElementById('stepUpPercent').value) / 100;
-        const stepUpFixed = parseFloat(document.getElementById('stepUpFixed').value);
-        const existingCorpus = parseFloat(document.getElementById('existingCorpus').value) || 0;
-        const otherIncomeMonthly = parseFloat(document.getElementById('otherIncomeMonthly').value) || 0;
-        const lifeExpectancy = parseFloat(document.getElementById('lifeExpectancy').value) || 85;
+    // ===================== PDF REPORT =====================
 
-        if (retireAge <= currentAge) {
-            alert('निवृत्तीचे वय सध्याच्या वयापेक्षा जास्त असणे आवश्यक आहे!');
-            return;
+    function buildPdfDoc() {
+        if (!globalPlanData || !globalPlanData.swpSeries) {
+            alert('कृपया आधी "Calculate Plan" दाबून प्लॅन तयार करा.');
+            return null;
         }
-        if (lifeExpectancy <= retireAge) {
-            alert('अपेक्षित आयुर्मान निवृत्तीच्या वयापेक्षा जास्त असणे आवश्यक आहे!');
-            return;
+        if (!window.jspdf) {
+            alert('PDF तयार करणारी लायब्ररी अजून लोड होत आहे, कृपया 2-3 सेकंदांनी पुन्हा प्रयत्न करा.');
+            return null;
         }
 
-        const yearsToRetire = Math.round(retireAge - currentAge);
-        const yearsInRetirement = Math.round(lifeExpectancy - retireAge);
+        const { jsPDF } = window.jspdf;
+        const doc = new jsPDF({ unit: 'mm', format: 'a4' });
+        const pageW = doc.internal.pageSize.getWidth();
+        const margin = 15;
+        let y = margin;
+        const d = globalPlanData;
+        const clientName = document.getElementById('clientName').value || 'ग्राहक';
+        const calcDate = document.getElementById('calcDate').value || '';
 
-        // 1. Future Monthly Expense
-        const futureMonthlyExpense = monthlyExpense * Math.pow((1 + inflationRate), yearsToRetire);
+        // Header
+        doc.setFillColor(30, 58, 138);
+        doc.rect(0, 0, pageW, 24, 'F');
+        doc.setTextColor(255, 255, 255);
+        doc.setFont('helvetica', 'bold');
+        doc.setFontSize(15);
+        doc.text('Special SIP-SWP Plan', margin, 12);
+        doc.setFont('helvetica', 'normal');
+        doc.setFontSize(10);
+        doc.text('Valmik Dagu Ugale | ARN-142382 | AMFI-registered Mutual Fund Distributor', margin, 19);
+        y = 32;
 
-        // Other guaranteed income (pension/rental, entered in today's terms) is
-        // inflated to retirement-day terms the same way expenses are, then
-        // netted off — the corpus only needs to fund the remaining gap.
-        const futureOtherIncomeMonthly = otherIncomeMonthly * Math.pow((1 + inflationRate), yearsToRetire);
-        const netFutureMonthlyExpense = Math.max(0, futureMonthlyExpense - futureOtherIncomeMonthly);
-        const netFutureAnnualExpense = netFutureMonthlyExpense * 12;
+        pdfSafeText(doc, 'क्लायंट: ' + clientName, margin, y, { fontMM: 4 });
+        pdfSafeText(doc, 'दिनांक: ' + calcDate, pageW - margin, y, { fontMM: 4, align: 'right' });
+        y += 9;
 
-        // 2. Target Corpus Calculation
-        const realRatePost = ((1 + postReturn) / (1 + inflationRate)) - 1;
-        let retirementAnnuityFactor;
-        if (Math.abs(realRatePost) < 0.0001) {
-            retirementAnnuityFactor = yearsInRetirement;
-        } else {
-            retirementAnnuityFactor = (1 - Math.pow(1 + realRatePost, -yearsInRetirement)) / realRatePost;
+        doc.setDrawColor(226, 232, 240);
+        doc.line(margin, y, pageW - margin, y);
+        y += 8;
+
+        pdfSafeText(doc, 'मासिक SIP रक्कम: ' + formatINR(d.baseSip) + '   |   गुंतवणूक काळातील परतावा: ' + d.expectedReturn + '%', margin, y, { fontMM: 3.8 });
+        y += 7;
+        pdfSafeText(doc, 'सध्याचे वय: ' + d.currentAge + '   |   गुंतवणूक कालावधी: ' + d.investDuration + ' वर्षे   |   निवृत्तीचे वय: ' + d.retireAge, margin, y, { fontMM: 3.8 });
+        y += 7;
+        pdfSafeText(doc, 'निवृत्तीनंतरचा परतावा: ' + d.postReturn + '%   |   फिक्स मासिक उत्पन्न: ' + formatINR(d.fixedIncomeAmount) + '   |   आयुर्मान: ' + d.lifeExpectancy + ' वर्षे', margin, y, { fontMM: 3.8 });
+        y += 8;
+
+        let sipTypeLabel = 'सामान्य SIP (Normal)';
+        if (d.sipType === 'percent') sipTypeLabel = 'दरवर्षी ' + d.stepPercent + '% ने वाढणारी Step-Up SIP';
+        if (d.sipType === 'fixed') sipTypeLabel = 'दरवर्षी ' + formatINR(d.stepFixed) + ' ने वाढणारी Step-Up SIP';
+        pdfSafeText(doc, 'SIP प्रकार: ' + sipTypeLabel, margin, y, { fontMM: 3.8 });
+        y += 10;
+
+        // Summary boxes
+        pdfSafeText(doc, 'एकूण गुंतवणूक', margin, y, { fontMM: 3.6, color: '#64748b' });
+        pdfSafeText(doc, formatINR(d.invested), margin, y + 6, { fontMM: 4.2, weight: 'bold' });
+
+        pdfSafeText(doc, 'अंदाजे तयार होणारा फंड', margin + 65, y, { fontMM: 3.6, color: '#64748b' });
+        pdfSafeText(doc, formatINR(d.corpus), margin + 65, y + 6, { fontMM: 4.2, weight: 'bold', color: '#c2410c' });
+
+        pdfSafeText(doc, 'मासिक उत्पन्न (फिक्स)', margin + 130, y, { fontMM: 3.6, color: '#64748b' });
+        pdfSafeText(doc, formatINR(d.monthlyIncome) + '/mo (' + d.multiplier.toFixed(1) + 'x)', margin + 130, y + 6, { fontMM: 4.2, weight: 'bold', color: '#15803d' });
+        y += 16;
+
+        pdfSafeText(doc, 'प्रभावी विथड्रॉवल दर (पहिल्या वर्षी)', margin, y, { fontMM: 3.6, color: '#64748b' });
+        pdfSafeText(doc, d.effectiveRateYear1.toFixed(2) + '%', margin, y + 6, { fontMM: 4.2, weight: 'bold', color: '#b45309' });
+
+        pdfSafeText(doc, 'वारसासाठी शिल्लक कॉर्पस (वय ' + d.lifeExpectancy + ')', margin + 90, y, { fontMM: 3.6, color: '#64748b' });
+        pdfSafeText(doc, formatINR(d.finalNomineeCorpus), margin + 90, y + 6, { fontMM: 4.2, weight: 'bold', color: '#1e3a8a' });
+        y += 16;
+
+        // Ideal sustainable amount box
+        y = ensureSpace(doc, y, 20, margin);
+        doc.setFillColor(239, 246, 255);
+        doc.setDrawColor(191, 219, 254);
+        doc.roundedRect(margin, y, pageW - margin * 2, 16, 2, 2, 'FD');
+        pdfSafeText(doc, 'आदर्श (Ideal) मासिक उत्पन्न — कॉर्पस कायम ठेवण्यासाठी', margin + 4, y + 6, { fontMM: 3.4, color: '#1e3a8a', weight: 'bold' });
+        pdfSafeText(doc, formatINR(d.idealMonthlyAmount) + ' / महिना', margin + 4, y + 12, { fontMM: 3.8, weight: 'bold', color: '#1e3a8a' });
+        y += 22;
+
+        // --- Cost of Delay Urgency Box (honest, calculated; whole box links to WhatsApp) ---
+        if (d.delayReducedMonthlyIncome && d.delayReducedMonthlyIncome > 0) {
+            const boxW = pageW - margin * 2;
+            const urgencyPara = renderParagraphToImage(
+                'आजच SIP सुरू केल्यास हे ध्येय Rs. ' + Math.round(d.corpus).toLocaleString('en-IN') +
+                ' मध्ये साध्य करता येईल. पण १ वर्ष उशीर केल्यास तुमचा Rs. ' + Math.round(d.delayShortfallCorpus).toLocaleString('en-IN') +
+                ' एवढा कॉर्पस कमी होईल — नुसत्या उशीरामुळे तुम्हाला तब्बल Rs. ' + Math.round(d.delayReducedMonthlyIncome).toLocaleString('en-IN') +
+                '/महिना एवढी कमी शाश्वत निवृत्ती उत्पन्न क्षमता मिळेल.',
+                boxW - 10, 4.0, '#78350f'
+            );
+            const ctaLine = renderParagraphToImage(
+                'योग्य वेळी योग्य पाऊल उचलण्यासाठी — आजच कॉल किंवा WhatsApp करून मार्गदर्शन घ्या. 8087126804',
+                boxW - 10, 4.0, '#92400e', { weight: 'bold' }
+            );
+            const boxH = urgencyPara.hmm + ctaLine.hmm + 16;
+            y = ensureSpace(doc, y, boxH + 6, margin);
+
+            doc.setFillColor(255, 251, 235);
+            doc.setDrawColor(253, 230, 138);
+            doc.roundedRect(margin, y, boxW, boxH, 2, 2, 'FD');
+            doc.setFillColor(217, 119, 6);
+            doc.rect(margin, y, 1.8, boxH, 'F');
+            let innerY = y + 6;
+            doc.addImage(urgencyPara.dataUrl, 'PNG', margin + 4, innerY, urgencyPara.wmm, urgencyPara.hmm);
+            innerY += urgencyPara.hmm + 3.5;
+            doc.addImage(ctaLine.dataUrl, 'PNG', margin + 4, innerY, ctaLine.wmm, ctaLine.hmm);
+            doc.link(margin, y, boxW, boxH, { url: 'https://wa.me/918087126804' });
+            y += boxH + 8;
         }
-        const totalCorpus = netFutureAnnualExpense * retirementAnnuityFactor;
 
-        // Existing investments grow on their own till retirement at the
-        // pre-retirement return rate; only the remaining gap needs a new SIP.
-        const futureValueExistingCorpus = existingCorpus * Math.pow(1 + preReturn, yearsToRetire);
-        const corpusGapNeeded = Math.max(0, totalCorpus - futureValueExistingCorpus);
-
-        // Annuity-due FV factor for `periods` monthly contributions at monthly
-        // rate `rate`. Guards against rate=0 (e.g. user enters 0% return),
-        // which would otherwise divide by zero — in that case FV is simply
-        // the sum of contributions (no growth).
-        function annuityDueFactor(rate, periods) {
-            if (Math.abs(rate) < 1e-9) return periods;
-            return ((Math.pow(1 + rate, periods) - 1) / rate) * (1 + rate);
-        }
-
-        // 3. Mathematical Logic for SIP calculations
-        const r = preReturn / 12;
-        const Y = yearsToRetire;
-        const totalMonths = Y * 12;
-
-        // A. Normal SIP Calculation (targets the remaining gap, net of
-        // existing corpus grown forward)
-        const normalSipMultiplier = annuityDueFactor(r, totalMonths);
-        const normalSIP = corpusGapNeeded / normalSipMultiplier;
-
-        // A2. Cost of Delay: same monthly SIP, but 1 year less to invest it —
-        // resulting corpus shortfall, converted into reduced monthly retirement income
-        let delayShortfallCorpus = null;
-        let delayReducedMonthlyIncome = null;
-        if (Y > 1) {
-            const delayedMonths = (Y - 1) * 12;
-            const delayedMultiplier = annuityDueFactor(r, delayedMonths);
-            const achievedCorpusWithDelay = normalSIP * delayedMultiplier;
-            delayShortfallCorpus = corpusGapNeeded - achievedCorpusWithDelay;
-            if (delayShortfallCorpus > 0) {
-                delayReducedMonthlyIncome = (delayShortfallCorpus / retirementAnnuityFactor) / 12;
+        try {
+            const depCanvas = document.getElementById('depletionChart');
+            if (depCanvas) {
+                const imgW = pageW - margin * 2;
+                const imgH = imgW * (depCanvas.height / depCanvas.width);
+                doc.addImage(depCanvas.toDataURL('image/png'), 'PNG', margin, y, imgW, imgH);
+                y += imgH + 10;
             }
-        }
+        } catch (e) { /* chart image optional */ }
 
-        // B. Step-Up % SIP Calculation
-        const year12SipMultiplier = annuityDueFactor(r, 12);
-        
-        let percentStepUpFactorSum = 0;
-        for (let y = 1; y <= Y; y++) {
-            let yearMultiplier = Math.pow(1 + stepUpPercent, y - 1);
-            let growthYears = Y - y;
-            let yearEndValue = year12SipMultiplier * Math.pow(1 + r, 12 * growthYears);
-            percentStepUpFactorSum += yearMultiplier * yearEndValue;
-        }
-        const percentStepUpSIP = corpusGapNeeded / percentStepUpFactorSum;
+        y = ensureSpace(doc, y, 20, margin);
 
-        // C. Step-Up Fixed Amount SIP Calculation
-        let fixedBaseFactorSum = 0;
-        let fixedAddonFactorSum = 0;
-        for (let y = 1; y <= Y; y++) {
-            let growthYears = Y - y;
-            let yearEndValue = year12SipMultiplier * Math.pow(1 + r, 12 * growthYears);
-            fixedBaseFactorSum += yearEndValue;
-            fixedAddonFactorSum += (y - 1) * stepUpFixed * yearEndValue;
-        }
-        
-        let fixedStepUpSIP = (corpusGapNeeded - fixedAddonFactorSum) / fixedBaseFactorSum;
-        let fixedStepUpOvershoots = fixedStepUpSIP < 0;
-        if (fixedStepUpSIP < 0) fixedStepUpSIP = 0;
+        // Year-wise SWP table
+        const colW = [8, 10, 26, 22, 24, 20, 28, 18];
+        const colX = [
+            margin,
+            margin + colW[0],
+            margin + colW[0] + colW[1],
+            margin + colW[0] + colW[1] + colW[2],
+            margin + colW[0] + colW[1] + colW[2] + colW[3],
+            margin + colW[0] + colW[1] + colW[2] + colW[3] + colW[4],
+            margin + colW[0] + colW[1] + colW[2] + colW[3] + colW[4] + colW[5],
+            margin + colW[0] + colW[1] + colW[2] + colW[3] + colW[4] + colW[5] + colW[6]
+        ];
+        const rowH = 8;
+        const headers = ['Yr', 'Age', 'Opening', 'Monthly', 'Withdrawn', 'Interest', 'Closing', 'Rate%'];
 
-        // D. Year-wise accumulation series (existing corpus growth + Normal
-        // SIP growth) from today (year 0) to retirement (year Y) — used for
-        // the accumulation chart.
-        const accumulationSeries = [];
-        for (let i = 0; i <= Y; i++) {
-            const existingVal = existingCorpus * Math.pow(1 + preReturn, i);
-            const sipVal = normalSIP * annuityDueFactor(r, i * 12);
-            accumulationSeries.push({
-                year: i,
-                age: currentAge + i,
-                existingVal,
-                sipVal,
-                totalVal: existingVal + sipVal
+        function drawHeaderRow() {
+            doc.setFillColor(30, 58, 138);
+            doc.rect(margin, y - 5.5, pageW - margin * 2, rowH, 'F');
+            headers.forEach((h, i) => {
+                pdfSafeText(doc, h, colX[i] + colW[i] / 2, y, { fontMM: 3.2, color: '#ffffff', weight: 'bold', align: 'center' });
             });
+            y += rowH;
         }
 
-        // E. Post-retirement SWP simulation — flat monthly withdrawal
-        // (= netFutureMonthlyExpense, held constant, not inflation-escalated,
-        // per distributor's choice for a simpler client-facing table) drawn
-        // from the target corpus at the post-retirement return rate,
-        // compounded monthly. Because the target corpus was sized for a
-        // *rising* withdrawal, a flat withdrawal typically leaves a growing
-        // legacy balance — that remaining balance is what a nominee would get
-        // if the client passed away at that point.
-        const monthlyPostReturn = postReturn / 12;
-        const swpSeries = [];
-        let swpBalance = totalCorpus;
-        let corpusExhaustedYear = null;
-        for (let yr = 1; yr <= yearsInRetirement; yr++) {
-            const openingBalance = swpBalance;
-            let withdrawalAnnual = 0;
-            let interestAnnual = 0;
-            for (let m = 0; m < 12; m++) {
-                if (swpBalance <= 0) {
-                    swpBalance = 0;
-                    continue;
-                }
-                const interest = swpBalance * monthlyPostReturn;
-                const withdrawal = Math.min(netFutureMonthlyExpense, swpBalance + interest);
-                swpBalance = swpBalance + interest - withdrawal;
-                interestAnnual += interest;
-                withdrawalAnnual += withdrawal;
-                if (swpBalance < 0) swpBalance = 0;
+        drawHeaderRow();
+
+        d.swpSeries.forEach((r, idx) => {
+            if (y + rowH > doc.internal.pageSize.getHeight() - margin) {
+                doc.addPage();
+                y = margin + 5.5;
+                drawHeaderRow();
             }
-            if (swpBalance <= 0 && corpusExhaustedYear === null && withdrawalAnnual < netFutureMonthlyExpense * 12) {
-                corpusExhaustedYear = yr;
+            if (idx % 2 === 0) {
+                doc.setFillColor(240, 253, 244);
+                doc.rect(margin, y - 5.5, pageW - margin * 2, rowH, 'F');
             }
-            swpSeries.push({
-                year: yr,
-                age: retireAge + yr,
-                openingBalance,
-                withdrawalAnnual,
-                interestAnnual,
-                closingBalance: swpBalance
-            });
-        }
-        const finalNomineeCorpus = swpSeries.length ? swpSeries[swpSeries.length - 1].closingBalance : totalCorpus;
-
-        globalCalcData = {
-            currentAge,
-            retireAge,
-            lifeExpectancy,
-            yearsToRetire,
-            yearsInRetirement,
-            futureMonthlyExpense,
-            futureOtherIncomeMonthly,
-            netFutureMonthlyExpense,
-            totalCorpus,
-            futureValueExistingCorpus,
-            corpusGapNeeded,
-            normalSIP,
-            percentStepUpSIP,
-            fixedStepUpSIP,
-            fixedStepUpOvershoots,
-            delayShortfallCorpus,
-            delayReducedMonthlyIncome,
-            accumulationSeries,
-            swpSeries,
-            finalNomineeCorpus,
-            corpusExhaustedYear,
-            stepUpPercentDisplay: (stepUpPercent * 100) + '%',
-            stepUpFixedDisplay: formatINR(stepUpFixed)
-        };
-
-        // Teaser Updates
-        document.getElementById('teaserFutureExpense').innerText = formatINR(futureMonthlyExpense) + ' / महिना';
-        document.getElementById('teaserCorpus').innerText = formatINR(totalCorpus);
-
-        // Full Results Updates (shown directly, no lead gate)
-        document.getElementById('resYearsToRetire').innerText = yearsToRetire + ' वर्षे';
-        document.getElementById('resFutureExpense').innerText = formatINR(futureMonthlyExpense) + ' / महिना';
-        document.getElementById('resTotalCorpus').innerText = formatINR(totalCorpus);
-
-        const rowExistingEl = document.getElementById('rowExistingCorpusFV');
-        const rowGapEl = document.getElementById('rowCorpusGap');
-        if (existingCorpus > 0) {
-            document.getElementById('resExistingCorpusFV').innerText = formatINR(futureValueExistingCorpus);
-            document.getElementById('resCorpusGap').innerText = formatINR(corpusGapNeeded);
-            rowExistingEl.style.display = 'flex';
-            rowGapEl.style.display = 'flex';
-        } else {
-            rowExistingEl.style.display = 'none';
-            rowGapEl.style.display = 'none';
-        }
-
-        document.getElementById('resNormalSIP').innerText = formatINR(normalSIP) + ' / महिना';
-        document.getElementById('resPercentStepUpSIP').innerText = formatINR(percentStepUpSIP) + ' / महिना';
-        document.getElementById('resFixedStepUpSIP').innerText = formatINR(fixedStepUpSIP) + ' / महिना';
-
-        const fixedNoteEl = document.getElementById('fixedStepUpNote');
-        if (fixedStepUpOvershoots) {
-            fixedNoteEl.innerText = 'दरवर्षी इतकी वाढ (₹' + Math.round(stepUpFixed).toLocaleString('en-IN') + ') इतक्या वर्षांसाठी स्वतःच पुरेशी आहे — वेगळा सुरुवातीचा SIP लागत नाही.';
-            fixedNoteEl.style.display = 'block';
-        } else {
-            fixedNoteEl.style.display = 'none';
-        }
-
-        document.getElementById('lblStepPercent').innerText = globalCalcData.stepUpPercentDisplay;
-        document.getElementById('lblStepFixed').innerText = globalCalcData.stepUpFixedDisplay;
-
-        const delayBoxEl = document.getElementById('delayCostBox');
-        if (delayReducedMonthlyIncome !== null && delayReducedMonthlyIncome > 0) {
-            document.getElementById('delayGoalToday').innerText = formatINR(corpusGapNeeded);
-            document.getElementById('delayShortfall').innerText = formatINR(delayShortfallCorpus);
-            document.getElementById('delayIncomeLoss').innerText = formatINR(delayReducedMonthlyIncome);
-            delayBoxEl.style.display = 'block';
-        } else {
-            delayBoxEl.style.display = 'none';
-        }
-
-        // ===== Post-Retirement SWP & Nominee Corpus section =====
-        document.getElementById('resSwpMonthly').innerText = formatINR(netFutureMonthlyExpense) + ' / महिना';
-        document.getElementById('resSwpNomineeLabel').innerText =
-            (lifeExpectancy) + ' व्या वर्षी (वयाच्या) वारसासाठी शिल्लक कॉर्पस:';
-        document.getElementById('resSwpNomineeCorpus').innerText = formatINR(finalNomineeCorpus);
-
-        const swpExhaustedNoteEl = document.getElementById('swpExhaustedNote');
-        if (corpusExhaustedYear !== null) {
-            swpExhaustedNoteEl.innerText = 'सूचना: दिलेल्या गृहितकांनुसार, अंदाजे ' + (retireAge + corpusExhaustedYear) +
-                ' व्या वयाच्या आसपास कॉर्पस संपण्याची शक्यता आहे. यासाठी पोर्टफोलिओ आढावा आवश्यक आहे.';
-            swpExhaustedNoteEl.style.display = 'block';
-        } else {
-            swpExhaustedNoteEl.style.display = 'none';
-        }
-
-        const swpTableBodyEl = document.getElementById('swpTableBody');
-        swpTableBodyEl.innerHTML = '';
-        swpSeries.forEach(row => {
-            const tr = document.createElement('tr');
-            if (corpusExhaustedYear !== null && row.year >= corpusExhaustedYear) {
-                tr.className = 'exhausted-row';
-            }
-            tr.innerHTML =
-                '<td>' + row.year + '</td>' +
-                '<td>' + row.age + '</td>' +
-                '<td>' + formatINR(row.openingBalance) + '</td>' +
-                '<td>' + formatINR(row.withdrawalAnnual) + '</td>' +
-                '<td>' + formatINR(row.interestAnnual) + '</td>' +
-                '<td>' + formatINR(row.closingBalance) + '</td>';
-            swpTableBodyEl.appendChild(tr);
+            pdfSafeText(doc, String(r.year), colX[0] + colW[0] / 2, y, { fontMM: 3.2, align: 'center' });
+            pdfSafeText(doc, String(r.age), colX[1] + colW[1] / 2, y, { fontMM: 3.2, align: 'center' });
+            pdfSafeText(doc, formatINR(r.openingBalance), colX[2] + colW[2] / 2, y, { fontMM: 3.2, align: 'center' });
+            pdfSafeText(doc, formatINR(r.monthlyIncome), colX[3] + colW[3] / 2, y, { fontMM: 3.2, align: 'center' });
+            pdfSafeText(doc, formatINR(r.withdrawalAnnual), colX[4] + colW[4] / 2, y, { fontMM: 3.2, align: 'center' });
+            pdfSafeText(doc, formatINR(r.interestAnnual), colX[5] + colW[5] / 2, y, { fontMM: 3.2, align: 'center' });
+            pdfSafeText(doc, formatINR(r.closingBalance), colX[6] + colW[6] / 2, y, { fontMM: 3.2, weight: 'bold', color: '#15803d', align: 'center' });
+            pdfSafeText(doc, r.effectiveRatePct.toFixed(1) + '%', colX[7] + colW[7] / 2, y, { fontMM: 3.2, color: '#b45309', align: 'center' });
+            y += rowH;
         });
 
-        document.getElementById('swpSection').style.display = 'block';
+        y += 8;
+        y = ensureSpace(doc, y, 20, margin);
 
-        drawAccumulationChart(accumulationSeries, totalCorpus);
-        drawDepletionChart(swpSeries, totalCorpus);
+        let footnoteText = sipTypeLabel + ' द्वारे वय ' + d.retireAge + ' पर्यंत तयार झालेला फंड, दरमहा फिक्स ' + formatINR(d.fixedIncomeAmount) +
+            ' (न बदलणारी रक्कम, प्रभावी दर पहिल्या वर्षी ' + d.effectiveRateYear1.toFixed(2) + '%) काढल्यास वय ' + d.lifeExpectancy + ' पर्यंत (' + d.yearsInRetirement + ' वर्षे) कसा राहील ते वरील तक्त्यात दाखवले आहे.';
+        if (d.corpusExhaustedYear !== null) {
+            footnoteText += ' ⚠️ सूचना: या गृहितकांनुसार वय ' + (d.retireAge + d.corpusExhaustedYear) + ' च्या आसपास कॉर्पस पूर्णपणे संपण्याची शक्यता आहे.';
+        }
+        const footnoteImg = renderParagraphToImage(footnoteText, pageW - margin * 2, 3.2, '#64748b');
+        doc.addImage(footnoteImg.dataUrl, 'PNG', margin, y, footnoteImg.wmm, footnoteImg.hmm);
+        y += footnoteImg.hmm + 10;
 
+        y = ensureSpace(doc, y, 40, margin);
+        doc.setFillColor(240, 253, 244);
+        doc.setDrawColor(134, 239, 172);
+        doc.roundedRect(margin, y, pageW - margin * 2, 26, 2, 2, 'FD');
+        pdfSafeText(doc, 'सविस्तर मार्गदर्शनासाठी संपर्क साधा:', margin + 5, y + 9, { fontMM: 3.6, weight: 'bold', color: '#166534' });
+        pdfSafeText(doc, '📞 8087126804   |   ✉️ valmikugale@gmail.com', margin + 5, y + 18, { fontMM: 3.6 });
+        y += 34;
+
+        // Disclaimer
+        y = ensureSpace(doc, y, 30, margin);
+        doc.setFont('helvetica', 'bold');
+        doc.setFontSize(9);
+        doc.setTextColor(100, 100, 100);
+        doc.text('Disclaimer:', margin, y);
+        y += 5;
+        doc.setFont('helvetica', 'normal');
+        doc.setFontSize(8);
+        const disclaimerLines = [
+            '1. SWP = Systematic Withdrawal Plan. Figures above are illustrative only.',
+            '2. Past performance may or may not be sustained in future and is not a guarantee of future returns.',
+            '3. Mutual Funds do not have a fixed rate of return; actual returns may vary.',
+            '4. Mutual Fund Investments are subject to market risks, read all scheme related documents carefully.'
+        ];
+        disclaimerLines.forEach(line => {
+            doc.text(line, margin, y);
+            y += 4.2;
+        });
+
+        return doc;
+    }
+
+    function buildPdfFileName(clientName) {
+        const safeName = (clientName || 'Client').replace(/[\\/:*?"<>|]/g, '-').trim();
+        return safeName + "'s Special SIP-SWP Plan.pdf";
+    }
+
+    function downloadPlanPdf() {
+        const doc = buildPdfDoc();
+        if (!doc) return;
+        const clientName = document.getElementById('clientName').value || 'Client';
+        doc.save(buildPdfFileName(clientName));
+    }
+
+    async function sharePlanWhatsApp() {
+        const doc = buildPdfDoc();
+        if (!doc) return;
         const clientName = document.getElementById('clientName').value || 'ग्राहक';
-        const waText = encodeURIComponent(`नमस्ते वाल्मीकजी! माझे नाव ${clientName} आहे. मी रिटायरमेंट कॅल्क्युलेटर वापरले.
+        const fileName = buildPdfFileName(clientName);
+        const blob = doc.output('blob');
 
-*माझा प्लॅन:* 
-• निवृत्तीचा मासिक खर्च: ${formatINR(futureMonthlyExpense)}
-• आवश्यक कॉर्पस: ${formatINR(totalCorpus)}
-• Normal SIP: ${formatINR(normalSIP)}/महिना
-• % Step-up SIP: ${formatINR(percentStepUpSIP)}/महिना
-• निवृत्तीनंतर मासिक उत्पन्न (SWP): ${formatINR(netFutureMonthlyExpense)}/महिना
-
-मला मोफत मार्गदर्शन हवे आहे.`);
-
-        const waFinalBtnEl = document.getElementById('waFinalBtn');
-        if (waFinalBtnEl) {
-            waFinalBtnEl.href = `https://wa.me/918087126804?text=${waText}`;
+        const shared = await tryNativeShare(blob, fileName, 'Special SIP-SWP Plan - ' + clientName);
+        if (!shared) {
+            doc.save(fileName);
+            const waText = encodeURIComponent('नमस्ते! माझा Special SIP-SWP Plan PDF सोबत जोडत आहे (attach करत आहे).');
+            window.open('https://wa.me/918087126804?text=' + waText, '_blank');
         }
+    }
 
-        document.getElementById('resultsBox').style.display = 'block';
-        document.getElementById('fullResults').style.display = 'block';
+    async function sharePlanEmail() {
+        const doc = buildPdfDoc();
+        if (!doc) return;
+        const clientName = document.getElementById('clientName').value || 'ग्राहक';
+        const fileName = buildPdfFileName(clientName);
+        const blob = doc.output('blob');
 
-        const resultsBoxEl = document.getElementById('resultsBox');
-        if (resultsBoxEl && typeof resultsBoxEl.scrollIntoView === 'function') {
-            resultsBoxEl.scrollIntoView({ behavior: 'smooth' });
+        const shared = await tryNativeShare(blob, fileName, 'Special SIP-SWP Plan - ' + clientName);
+        if (!shared) {
+            doc.save(fileName);
+            const subject = encodeURIComponent('Special SIP-SWP Plan - ' + clientName);
+            const body = encodeURIComponent('नमस्ते,\n\nमाझा Special SIP-SWP Plan PDF सोबत जोडत आहे (attach करत आहे).\n\nधन्यवाद.');
+            window.location.href = 'mailto:valmikugale@gmail.com?subject=' + subject + '&body=' + body;
         }
+    }
+
+
+    function formatINR(val) {
+        return new Intl.NumberFormat('en-IN', {
+            style: 'currency',
+            currency: 'INR',
+            maximumFractionDigits: 0
+        }).format(val);
     }
 
     // ===================== PDF REPORT GENERATION =====================
@@ -1694,455 +1898,14 @@
         return y;
     }
 
-    function buildPdfDoc() {
-        if (!globalCalcData || !globalCalcData.totalCorpus) {
-            alert('कृपया आधी "Calculate Plan" दाबून प्लॅन तयार करा.');
-            return null;
-        }
-        if (!window.jspdf) {
-            alert('PDF तयार करणारी लायब्ररी अजून लोड होत आहे, कृपया 2-3 सेकंदांनी पुन्हा प्रयत्न करा.');
-            return null;
-        }
-
-        const { jsPDF } = window.jspdf;
-        const doc = new jsPDF({ unit: 'mm', format: 'a4' });
-        const pageW = doc.internal.pageSize.getWidth();
-        const margin = 15;
-        let y = 15;
-
-        const clientName = document.getElementById('clientName').value || 'ग्राहक';
-        const calcDate = document.getElementById('calcDate').value || '';
-        const d = globalCalcData;
-
-        // --- Header: Logo + Name/ARN ---
-        try {
-            const logoImg = document.querySelector('.brand-left img');
-            if (logoImg && logoImg.src) {
-                doc.addImage(logoImg.src, 'PNG', margin, y, 20, 17.7);
-            }
-        } catch (e) { /* logo optional, continue without it if it fails */ }
-
-        doc.setFont('helvetica', 'bold');
-        doc.setFontSize(15);
-        doc.setTextColor(30, 58, 138);
-        doc.text('Valmik Dagu Ugale | ARN-142382', margin + 22, y + 6);
-
-        doc.setFont('helvetica', 'normal');
-        doc.setFontSize(10.5);
-        doc.setTextColor(90, 90, 90);
-        doc.text('AMFI-registered mutual fund distributor & SIF distributor', margin + 22, y + 11.5);
-
-        pdfSafeText(doc, 'तुमच्या आर्थिक भविष्याचा विश्वासू जोडीदार', margin + 22, y + 17.5, { fontMM: 4.0, color: '#1e3a8a', weight: 'italic' });
-
-        // Contact block sits on its own row below the name/subtitle/tagline
-        // so it never collides with them regardless of text width.
-        pdfSafeText(doc, 'संपर्क: 8087126804', pageW - margin, y + 6, { fontMM: 3.6, color: '#1e293b', align: 'right' });
-        doc.setFont('helvetica', 'normal');
-        doc.setFontSize(10);
-        doc.setTextColor(30, 41, 59);
-        doc.text('valmikugale@gmail.com', pageW - margin, y + 11.5, { align: 'right' });
-        pdfSafeText(doc, 'नाशिक, महाराष्ट्र - 422003', pageW - margin, y + 17, { fontMM: 3.6, color: '#1e293b', align: 'right' });
-
-        y += 24;
-        doc.setDrawColor(30, 58, 138);
-        doc.setLineWidth(0.6);
-        doc.line(margin, y, pageW - margin, y);
-        y += 10;
-
-        // --- Title ---
-        doc.setFont('helvetica', 'bold');
-        doc.setFontSize(18);
-        doc.setTextColor(30, 58, 138);
-        doc.text('Retirement, SIP & SWP Plan', margin, y);
-        y += 9;
-
-        doc.setFont('helvetica', 'normal');
-        doc.setFontSize(11.5);
-        doc.setTextColor(50, 50, 50);
-        pdfSafeText(doc, 'Client Name: ' + clientName, margin, y, { fontMM: 4.3, color: '#323232' });
-        doc.text('Date: ' + calcDate, pageW - margin, y, { align: 'right' });
-        y += 9.5;
-
-        // --- Input Parameters ---
-        const rows = [
-            ['Current Age', document.getElementById('currentAge').value + ' years'],
-            ['Retirement Age', document.getElementById('retireAge').value + ' years'],
-            ['Investment Duration', d.yearsToRetire + ' years'],
-            ['Current Monthly Expense', 'Rs. ' + Number(document.getElementById('monthlyExpense').value).toLocaleString('en-IN') + '/month'],
-            ['Inflation Rate', document.getElementById('inflationRate').value + '%'],
-            ['Pre-Retirement Return', document.getElementById('preReturn').value + '%'],
-            ['Post-Retirement Return', document.getElementById('postReturn').value + '%'],
-            ['Life Expectancy', document.getElementById('lifeExpectancy').value + ' years'],
-            ['Existing Retirement Corpus', 'Rs. ' + Number(document.getElementById('existingCorpus').value || 0).toLocaleString('en-IN')],
-            ['Other Guaranteed Income (today\'s value)', 'Rs. ' + Number(document.getElementById('otherIncomeMonthly').value || 0).toLocaleString('en-IN') + '/month'],
-        ];
-
-        doc.setFontSize(12.5);
-        rows.forEach(([label, val]) => {
-            doc.setFont('helvetica', 'normal');
-            doc.setTextColor(70, 70, 70);
-            doc.text(label, margin, y);
-            doc.setFont('helvetica', 'bold');
-            doc.setTextColor(30, 30, 30);
-            doc.text(val, pageW - margin, y, { align: 'right' });
-            doc.setDrawColor(230, 230, 230);
-            doc.setLineWidth(0.2);
-            doc.line(margin, y + 2.2, pageW - margin, y + 2.2);
-            y += 9.5;
-        });
-
-        y += 3;
-        doc.setFont('helvetica', 'bold');
-        doc.setFontSize(13);
-        doc.setTextColor(30, 30, 30);
-        doc.text('Future Monthly Expense (at retirement)', margin, y);
-        doc.text('Rs. ' + Math.round(d.futureMonthlyExpense).toLocaleString('en-IN') + '/month', pageW - margin, y, { align: 'right' });
-        y += 9.5;
-
-        doc.text('Target Retirement Corpus Needed', margin, y);
-        doc.setTextColor(30, 58, 138);
-        doc.text('Rs. ' + Math.round(d.totalCorpus).toLocaleString('en-IN'), pageW - margin, y, { align: 'right' });
-        y += 9.5;
-
-        if (d.futureValueExistingCorpus && d.futureValueExistingCorpus > 0) {
-            doc.setFont('helvetica', 'normal');
-            doc.setFontSize(11.5);
-            doc.setTextColor(90, 90, 90);
-            doc.text('   Less: Existing Investments (grown to retirement)', margin, y);
-            doc.setTextColor(21, 128, 61);
-            doc.text('- Rs. ' + Math.round(d.futureValueExistingCorpus).toLocaleString('en-IN'), pageW - margin, y, { align: 'right' });
-            y += 8;
-
-            doc.setFont('helvetica', 'bold');
-            doc.setFontSize(13);
-            doc.setTextColor(30, 30, 30);
-            doc.text('Remaining Corpus Gap (via new SIP)', margin, y);
-            doc.setTextColor(30, 58, 138);
-            doc.text('Rs. ' + Math.round(d.corpusGapNeeded).toLocaleString('en-IN'), pageW - margin, y, { align: 'right' });
-            y += 9.5;
-        } else {
-            y += 1.5;
-        }
-
-        // --- SIP Options ---
-        doc.setFillColor(30, 58, 138);
-        doc.rect(margin, y - 6, pageW - margin * 2, 9.5, 'F');
-        doc.setTextColor(255, 255, 255);
-        doc.setFontSize(13);
-        doc.text('Required Monthly SIP Options', margin + 3, y);
-        y += 10.5;
-
-        const stepUpFixedRaw = Number(document.getElementById('stepUpFixed').value) || 0;
-        const sipRows = [
-            ['Normal Fixed SIP', 'Rs. ' + Math.round(d.normalSIP).toLocaleString('en-IN') + '/mo'],
-            ['% Step-Up SIP (' + d.stepUpPercentDisplay + ' p.a.)', 'Rs. ' + Math.round(d.percentStepUpSIP).toLocaleString('en-IN') + '/mo'],
-            ['Fixed Amount Step-Up SIP (+Rs. ' + stepUpFixedRaw.toLocaleString('en-IN') + '/yr)', 'Rs. ' + Math.round(d.fixedStepUpSIP).toLocaleString('en-IN') + '/mo'],
-        ];
-
-        sipRows.forEach(([label, val], idx) => {
-            if (idx % 2 === 0) {
-                doc.setFillColor(240, 253, 244);
-                doc.rect(margin, y - 6, pageW - margin * 2, 9.5, 'F');
-            }
-            doc.setFont('helvetica', 'normal');
-            doc.setFontSize(12.5);
-            doc.setTextColor(50, 50, 50);
-            doc.text(label, margin + 3, y);
-            doc.setFont('helvetica', 'bold');
-            doc.setTextColor(21, 128, 61);
-            doc.text(val, pageW - margin - 3, y, { align: 'right' });
-            y += 9.5;
-        });
-
-        if (d.fixedStepUpOvershoots) {
-            doc.setFont('helvetica', 'italic');
-            doc.setFontSize(9.5);
-            doc.setTextColor(100, 100, 100);
-            const noteLines = doc.splitTextToSize(
-                'Note: The given fixed yearly increase is large enough on its own to reach the goal over this period, so no separate starting SIP is required for this option.',
-                pageW - margin * 2 - 4
-            );
-            doc.text(noteLines, margin + 3, y);
-            y += noteLines.length * 4.2;
-        }
-
-        y += 6;
-
-        // --- Cost of Delay Urgency Box (honest, calculated) ---
-        if (d.delayReducedMonthlyIncome && d.delayReducedMonthlyIncome > 0) {
-            const boxW = pageW - margin * 2;
-            const urgencyPara = renderParagraphToImage(
-                'आजच SIP सुरू केल्यास हे ध्येय Rs. ' + Math.round(d.totalCorpus).toLocaleString('en-IN') +
-                ' मध्ये साध्य करता येईल. पण १ वर्ष उशीर केल्यास तुमचा Rs. ' + Math.round(d.delayShortfallCorpus).toLocaleString('en-IN') +
-                ' एवढा कॉर्पस कमी होईल — नुसत्या उशीरामुळे तुम्हाला तब्बल Rs. ' + Math.round(d.delayReducedMonthlyIncome).toLocaleString('en-IN') +
-                '/महिना एवढी कमी निवृत्ती उत्पन्न मिळेल.',
-                boxW - 10, 4.0, '#78350f'
-            );
-            const ctaLine = renderParagraphToImage(
-                'योग्य वेळी योग्य पाऊल उचलण्यासाठी — आजच कॉल किंवा WhatsApp करून मार्गदर्शन घ्या. 8087126804',
-                boxW - 10, 4.0, '#92400e', { weight: 'bold' }
-            );
-            const boxH = urgencyPara.hmm + ctaLine.hmm + 16;
-            y = ensureSpace(doc, y, boxH + 6, margin);
-
-            doc.setFillColor(255, 251, 235);
-            doc.setDrawColor(253, 230, 138);
-            doc.roundedRect(margin, y, boxW, boxH, 2, 2, 'FD');
-            doc.setFillColor(217, 119, 6);
-            doc.rect(margin, y, 1.8, boxH, 'F');
-            let innerY = y + 6;
-            doc.addImage(urgencyPara.dataUrl, 'PNG', margin + 4, innerY, urgencyPara.wmm, urgencyPara.hmm);
-            innerY += urgencyPara.hmm + 3.5;
-            doc.addImage(ctaLine.dataUrl, 'PNG', margin + 4, innerY, ctaLine.wmm, ctaLine.hmm);
-            doc.link(margin, y, boxW, boxH, { url: 'https://wa.me/918087126804' });
-            y += boxH + 8;
-        }
-
-        // --- Accumulation Chart (page break for a clean layout) ---
-        if (d.accumulationSeries && d.accumulationSeries.length) {
+    // Adds a new PDF page and resets y if there isn't enough room left
+    function ensureSpace(doc, y, neededMM, margin) {
+        const pageH = doc.internal.pageSize.getHeight();
+        if (y + neededMM > pageH - margin) {
             doc.addPage();
-            y = margin;
-            doc.setFillColor(30, 58, 138);
-            doc.rect(margin, y - 6, pageW - margin * 2, 9.5, 'F');
-            doc.setTextColor(255, 255, 255);
-            doc.setFont('helvetica', 'bold');
-            doc.setFontSize(13);
-            doc.text('Corpus Growth Till Retirement (Normal SIP)', margin + 3, y);
-            y += 12;
-
-            try {
-                const accCanvas = document.getElementById('accumulationChart');
-                if (accCanvas) {
-                    const imgW = pageW - margin * 2;
-                    const imgH = imgW * (accCanvas.height / accCanvas.width);
-                    doc.addImage(accCanvas.toDataURL('image/png'), 'PNG', margin, y, imgW, imgH);
-                    y += imgH + 10;
-                }
-            } catch (e) { /* chart image optional */ }
-
-            // --- Post-Retirement SWP & Nominee Corpus ---
-            y = ensureSpace(doc, y, 20, margin);
-            doc.setFillColor(21, 128, 61);
-            doc.rect(margin, y - 6, pageW - margin * 2, 9.5, 'F');
-            doc.setTextColor(255, 255, 255);
-            doc.setFontSize(13);
-            doc.text('Post-Retirement Income (SWP) & Nominee Corpus', margin + 3, y);
-            y += 11;
-
-            doc.setFont('helvetica', 'normal');
-            doc.setFontSize(12);
-            doc.setTextColor(60, 60, 60);
-            doc.text('Flat Monthly Withdrawal (SWP)', margin, y);
-            doc.setFont('helvetica', 'bold');
-            doc.setTextColor(30, 58, 138);
-            doc.text('Rs. ' + Math.round(d.netFutureMonthlyExpense).toLocaleString('en-IN') + '/mo', pageW - margin, y, { align: 'right' });
-            y += 8;
-
-            doc.setFont('helvetica', 'normal');
-            doc.setTextColor(60, 60, 60);
-            doc.text('Legacy Corpus for Nominee (at age ' + Math.round(d.lifeExpectancy) + ')', margin, y);
-            doc.setFont('helvetica', 'bold');
-            doc.setTextColor(21, 128, 61);
-            doc.text('Rs. ' + Math.round(d.finalNomineeCorpus).toLocaleString('en-IN'), pageW - margin, y, { align: 'right' });
-            y += 10;
-
-            try {
-                const depCanvas = document.getElementById('depletionChart');
-                if (depCanvas) {
-                    const imgW = pageW - margin * 2;
-                    const imgH = imgW * (depCanvas.height / depCanvas.width);
-                    y = ensureSpace(doc, y, imgH + 6, margin);
-                    doc.addImage(depCanvas.toDataURL('image/png'), 'PNG', margin, y, imgW, imgH);
-                    y += imgH + 10;
-                }
-            } catch (e) { /* chart image optional */ }
-
-            // Year-wise nominee-corpus table (paginated)
-            if (d.swpSeries && d.swpSeries.length) {
-                const colW = [12, 14, 36, 34, 34, 44];
-                const colX = [
-                    margin,
-                    margin + colW[0],
-                    margin + colW[0] + colW[1],
-                    margin + colW[0] + colW[1] + colW[2],
-                    margin + colW[0] + colW[1] + colW[2] + colW[3],
-                    margin + colW[0] + colW[1] + colW[2] + colW[3] + colW[4]
-                ];
-                const rowH = 7.2;
-
-                function drawSwpTableHeader() {
-                    doc.setFillColor(30, 58, 138);
-                    doc.rect(margin, y - 5.2, pageW - margin * 2, rowH, 'F');
-                    doc.setFont('helvetica', 'bold');
-                    doc.setFontSize(8.7);
-                    doc.setTextColor(255, 255, 255);
-                    doc.text('Yr', colX[0] + 2, y);
-                    doc.text('Age', colX[1] + 2, y);
-                    doc.text('Opening', colX[2] + colW[2] - 2, y, { align: 'right' });
-                    doc.text('Withdrawn', colX[3] + colW[3] - 2, y, { align: 'right' });
-                    doc.text('Interest', colX[4] + colW[4] - 2, y, { align: 'right' });
-                    doc.text('Closing (Nominee)', colX[5] + colW[5] - 2, y, { align: 'right' });
-                    y += rowH;
-                }
-
-                y = ensureSpace(doc, y, rowH * 2, margin);
-                drawSwpTableHeader();
-
-                doc.setFont('helvetica', 'normal');
-                doc.setFontSize(8.7);
-                d.swpSeries.forEach((row, idx) => {
-                    if (y + rowH > doc.internal.pageSize.getHeight() - margin) {
-                        doc.addPage();
-                        y = margin + 5.2;
-                        drawSwpTableHeader();
-                    }
-                    if (idx % 2 === 0) {
-                        doc.setFillColor(240, 253, 244);
-                        doc.rect(margin, y - 5.2, pageW - margin * 2, rowH, 'F');
-                    }
-                    const isExhausted = d.corpusExhaustedYear !== null && row.year >= d.corpusExhaustedYear;
-                    doc.setTextColor(isExhausted ? 185 : 50, isExhausted ? 28 : 50, isExhausted ? 28 : 50);
-                    doc.text(String(row.year), colX[0] + 2, y);
-                    doc.text(String(row.age), colX[1] + 2, y);
-                    doc.text(Math.round(row.openingBalance).toLocaleString('en-IN'), colX[2] + colW[2] - 2, y, { align: 'right' });
-                    doc.text(Math.round(row.withdrawalAnnual).toLocaleString('en-IN'), colX[3] + colW[3] - 2, y, { align: 'right' });
-                    doc.text(Math.round(row.interestAnnual).toLocaleString('en-IN'), colX[4] + colW[4] - 2, y, { align: 'right' });
-                    doc.setFont('helvetica', 'bold');
-                    doc.text(Math.round(row.closingBalance).toLocaleString('en-IN'), colX[5] + colW[5] - 2, y, { align: 'right' });
-                    doc.setFont('helvetica', 'normal');
-                    y += rowH;
-                });
-                y += 6;
-
-                y = ensureSpace(doc, y, 12, margin);
-                const swpNote = renderParagraphToImage(
-                    'टीप: वरील तक्ता दरमहा एक सारखी (flat) रक्कम काढल्यास दाखवतो, त्यामुळे कॉर्पस लवकर संपत नाही आणि कुटुंबासाठी/वारसासाठी शिल्लक राहते.',
-                    pageW - margin * 2 - 4, 3.4, '#64748b'
-                );
-                doc.addImage(swpNote.dataUrl, 'PNG', margin + 2, y, swpNote.wmm, swpNote.hmm);
-                y += swpNote.hmm + 6;
-            }
+            return margin;
         }
-
-        // --- WhatsApp CTA Banner ---
-        {
-            const boxW = pageW - margin * 2;
-            y = ensureSpace(doc, y, 22, margin);
-            const bannerText = renderParagraphToImage(
-                'संपत्ती निर्मिती | मुलांचं शिक्षण-लग्न खर्च | निवृत्तीनंतर उत्पन्न - मोफत मार्गदर्शनासाठी कॉल / WhatsApp करा 8087126804',
-                boxW - 10, 4.0, '#052e12', { weight: 'bold', align: 'center' }
-            );
-            const bannerH = bannerText.hmm + 9;
-            doc.setFillColor(37, 211, 102);
-            doc.roundedRect(margin, y, boxW, bannerH, 2, 2, 'F');
-            doc.addImage(bannerText.dataUrl, 'PNG', margin + 5, y + 4.5, bannerText.wmm, bannerText.hmm);
-            doc.link(margin, y, boxW, bannerH, { url: 'https://wa.me/918087126804' });
-            y += bannerH + 8;
-        }
-
-        // --- Final CTA ---
-        {
-            const boxW = pageW - margin * 2;
-            const ctaPara1 = renderParagraphToImage(
-                'कॅल्क्युलेटरने तुम्हाला फक्त आवश्यक आकडेवारी दाखवली आहे. पण हा प्लॅन प्रत्यक्षात कसा राबवायचा, योग्य म्युच्युअल फंड योजना कशा निवडायच्या आणि पोर्टफोलिओचे स्ट्रक्चर कसे असावे?',
-                boxW - 10, 3.7, '#166534', { align: 'center' }
-            );
-            const ctaPara2 = renderParagraphToImage(
-                'हे सविस्तर समजून घेण्यासाठी व तुमच्या सर्व शंकांचे निरसन करण्यासाठी आजच मोफत:',
-                boxW - 10, 3.7, '#166534', { align: 'center' }
-            );
-            const ctaLine2 = renderParagraphToImage(
-                'WhatsApp मेसेज करा  |  कॉल करा: 8087126804',
-                boxW - 10, 4.3, '#166534', { weight: 'bold', align: 'center' }
-            );
-            const ctaBoxH = ctaPara1.hmm + ctaPara2.hmm + ctaLine2.hmm + 20;
-            y = ensureSpace(doc, y, ctaBoxH + 6, margin);
-
-            doc.setFillColor(240, 253, 244);
-            doc.setDrawColor(134, 239, 172);
-            doc.roundedRect(margin, y, boxW, ctaBoxH, 2, 2, 'FD');
-            let cy = y + 7;
-            doc.addImage(ctaPara1.dataUrl, 'PNG', margin + 5, cy, ctaPara1.wmm, ctaPara1.hmm);
-            cy += ctaPara1.hmm + 3.5;
-            doc.addImage(ctaPara2.dataUrl, 'PNG', margin + 5, cy, ctaPara2.wmm, ctaPara2.hmm);
-            cy += ctaPara2.hmm + 3.5;
-            doc.addImage(ctaLine2.dataUrl, 'PNG', margin + 5, cy, ctaLine2.wmm, ctaLine2.hmm);
-            doc.link(margin, y, boxW, ctaBoxH, { url: 'https://wa.me/918087126804' });
-            y += ctaBoxH + 8;
-        }
-
-        y = ensureSpace(doc, y, 32, margin);
-
-        // --- Disclaimer ---
-        doc.setFont('helvetica', 'bold');
-        doc.setFontSize(10.5);
-        doc.setTextColor(70, 70, 70);
-        doc.text('Disclaimer:', margin, y);
-        y += 5.5;
-
-        const disclaimerPoints = [
-            'Past performance may or may not be sustained in future and is not a guarantee of any future returns.',
-            'Please note that these calculators are for illustrations only and do not represent actual returns.',
-            'Mutual Funds do not have a fixed rate of return and it is not possible to predict the rate of return.',
-            'Mutual Fund Investments are subject to market risks, read all scheme related documents carefully.',
-            'This report is generated based on the assumptions entered by the client.'
-        ];
-
-        doc.setFont('helvetica', 'normal');
-        doc.setFontSize(9.5);
-        disclaimerPoints.forEach((point, idx) => {
-            const lines = doc.splitTextToSize((idx + 1) + '. ' + point, pageW - margin * 2 - 4);
-            doc.text(lines, margin + 2, y);
-            y += lines.length * 4.8;
-        });
-
-        return doc;
-    }
-
-    // Builds the PDF filename as "{ClientName}'s Retirement income.pdf" —
-    // only strips characters that are actually unsafe in filenames, so
-    // spaces, apostrophes, and Devanagari names are preserved as typed.
-    function buildPdfFileName(clientName) {
-        const safeName = (clientName || 'Client').replace(/[\\/:*?"<>|]/g, '-').trim();
-        return safeName + "'s Retirement income.pdf";
-    }
-
-    function downloadPdfReport() {
-        const doc = buildPdfDoc();
-        if (!doc) return;
-        const clientName = document.getElementById('clientName').value || 'Client';
-        doc.save(buildPdfFileName(clientName));
-    }
-
-    async function sharePdfWhatsApp() {
-        const doc = buildPdfDoc();
-        if (!doc) return;
-        const clientName = document.getElementById('clientName').value || 'ग्राहक';
-        const fileName = buildPdfFileName(clientName);
-        const blob = doc.output('blob');
-
-        const shared = await tryNativeShare(blob, fileName, 'Retirement & SIP Plan - ' + clientName);
-        if (!shared) {
-            doc.save(fileName);
-            const waText = encodeURIComponent('नमस्ते! माझा Retirement & SIP Plan PDF सोबत जोडत आहे (attach करत आहे).');
-            window.open('https://wa.me/918087126804?text=' + waText, '_blank');
-        }
-    }
-
-    async function sharePdfEmail() {
-        const doc = buildPdfDoc();
-        if (!doc) return;
-        const clientName = document.getElementById('clientName').value || 'ग्राहक';
-        const fileName = buildPdfFileName(clientName);
-        const blob = doc.output('blob');
-
-        const shared = await tryNativeShare(blob, fileName, 'Retirement & SIP Plan - ' + clientName);
-        if (!shared) {
-            doc.save(fileName);
-            const subject = encodeURIComponent('Retirement & SIP Plan - ' + clientName);
-            const body = encodeURIComponent('नमस्ते,\n\nमाझा Retirement & SIP Plan PDF सोबत जोडत आहे (attach करत आहे).\n\nधन्यवाद.');
-            window.location.href = 'mailto:valmikugale@gmail.com?subject=' + subject + '&body=' + body;
-        }
+        return y;
     }
 
     async function tryNativeShare(blob, fileName, title) {
