@@ -1056,6 +1056,10 @@
             <span id="resCorpus" class="highlight-val" style="font-size: 18px; color: var(--primary);">₹0</span>
         </div>
         <div class="result-row">
+            <span>एकूण वाढ / फायदा (गुंतवलेल्या रकमेपेक्षा जास्त मिळालेली रक्कम):</span>
+            <span id="resGrowth" class="highlight-val" style="font-size: 17px; color:#15803d;">₹0</span>
+        </div>
+        <div class="result-row">
             <span>दरमहा उत्पन्न (SWP - फिक्स, न बदलणारे):</span>
             <span id="resSwpMonthly" class="highlight-val" style="font-size: 18px; color:#15803d;">₹0 / महिना</span>
         </div>
@@ -1340,6 +1344,7 @@
         document.getElementById('resDurationAge').innerText = investDuration + ' वर्षे / वय ' + retireAge;
         document.getElementById('resInvested').innerText = formatINR(invested);
         document.getElementById('resCorpus').innerText = formatINR(corpus);
+        document.getElementById('resGrowth').innerText = formatINR(corpus - invested) + '  (' + (corpus / invested).toFixed(1) + 'x गुंतवणुकीच्या तुलनेत)';
         document.getElementById('resSwpMonthly').innerText = formatINR(monthlyIncome) + ' / महिना';
         document.getElementById('resNomineeCorpus').innerText = formatINR(finalNomineeCorpus);
         document.getElementById('resEffectiveRate').innerText = effectiveRateYear1.toFixed(2) + '%';
@@ -1553,7 +1558,7 @@
         doc.line(margin, y, pageW - margin, y);
         y += 7;
 
-        pdfSafeText(doc, '9+ वर्षांचा अनुभव  |  AMFI-registered  |  SEBI Regulated', margin, y, { fontMM: 3.6, color: '#64748b' });
+        pdfSafeText(doc, '9+ वर्षांचा अनुभव  |  AMFI-registered  |  SEBI Regulated', pageW / 2, y, { fontMM: 3.6, color: '#64748b', align: 'center' });
         y += 9;
 
         // Report title banner
@@ -1568,12 +1573,16 @@
 
         // ===== Green branding banner — whole box links to WhatsApp =====
         {
-            const bannerH = 12;
+            const boxW = pageW - margin * 2;
+            const bannerPara = renderParagraphToImage(
+                '💰 संपत्ती निर्मिती  |  🎓 मुलांचं शिक्षण-लग्न खर्च  |  🏖️ निवृत्तीनंतर उत्पन्न — मोफत मार्गदर्शनासाठी कॉल/WhatsApp करा 👉 8087126804',
+                boxW - 12, 3.6, '#052e12', { weight: 'bold', align: 'center' }
+            );
+            const bannerH = bannerPara.hmm + 8;
             doc.setFillColor(37, 211, 102);
-            doc.roundedRect(margin, y, pageW - margin * 2, bannerH, 2, 2, 'F');
-            pdfSafeText(doc, '💰 संपत्ती निर्मिती  |  🎓 मुलांचं शिक्षण-लग्न खर्च  |  🏖️ निवृत्तीनंतर उत्पन्न — मोफत मार्गदर्शनासाठी कॉल/WhatsApp करा 👉 8087126804',
-                pageW / 2, y + 7.5, { fontMM: 3.4, color: '#052e12', weight: 'bold', align: 'center' });
-            doc.link(margin, y, pageW - margin * 2, bannerH, { url: 'https://wa.me/918087126804' });
+            doc.roundedRect(margin, y, boxW, bannerH, 2, 2, 'F');
+            doc.addImage(bannerPara.dataUrl, 'PNG', margin + 6, y + (bannerH - bannerPara.hmm) / 2, bannerPara.wmm, bannerPara.hmm);
+            doc.link(margin, y, boxW, bannerH, { url: 'https://wa.me/918087126804' });
             y += bannerH + 8;
         }
 
@@ -1597,7 +1606,7 @@
         y += inputCardH + 8;
 
         // ===== Key Results card =====
-        const resultCardH = 48;
+        const resultCardH = 66;
         doc.setFillColor(255, 255, 255);
         doc.setDrawColor(191, 219, 254);
         doc.setLineWidth(0.5);
@@ -1614,6 +1623,10 @@
 
         pdfSafeText(doc, 'मासिक उत्पन्न (फिक्स)', margin + 131, ry, { fontMM: 3.8, color: '#64748b' });
         pdfSafeText(doc, formatINR(d.monthlyIncome) + '/महिना (' + d.multiplier.toFixed(1) + 'x)', margin + 131, ry + 7, { fontMM: 4.4, weight: 'bold', color: '#15803d' });
+        ry += 18;
+
+        pdfSafeText(doc, 'एकूण वाढ / फायदा (गुंतवणुकीपेक्षा जास्त मिळालेली रक्कम)', margin + 5, ry, { fontMM: 3.8, color: '#64748b' });
+        pdfSafeText(doc, formatINR(d.corpus - d.invested) + '  (' + (d.corpus / d.invested).toFixed(1) + 'x)', margin + 5, ry + 7, { fontMM: 4.4, weight: 'bold', color: '#15803d' });
         ry += 18;
 
         pdfSafeText(doc, 'प्रभावी विथड्रॉवल दर (पहिल्या वर्षी)', margin + 5, ry, { fontMM: 3.8, color: '#64748b' });
@@ -1771,14 +1784,6 @@
             doc.link(margin, y, boxW, ctaBoxH, { url: 'https://wa.me/918087126804' });
             y += ctaBoxH + 8;
         }
-
-        y = ensureSpace(doc, y, 30, margin);
-        doc.setFillColor(240, 253, 244);
-        doc.setDrawColor(134, 239, 172);
-        doc.roundedRect(margin, y, pageW - margin * 2, 26, 2, 2, 'FD');
-        pdfSafeText(doc, 'सविस्तर मार्गदर्शनासाठी संपर्क साधा:', margin + 5, y + 9, { fontMM: 4, weight: 'bold', color: '#166534' });
-        pdfSafeText(doc, '📞 8087126804   |   ✉️ valmikugale@gmail.com', margin + 5, y + 18, { fontMM: 4 });
-        y += 34;
 
         // Disclaimer
         y = ensureSpace(doc, y, 30, margin);
